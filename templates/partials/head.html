@@ -1,0 +1,107 @@
+<html class="no-js">
+{% set page_title_stripped = page_title|striptags|e('html')|trim %}
+{% set page_description_stripped = page_description|striptags|e('html')|trim %}
+<head>
+
+  {# Default Meta tags #}
+  <meta charset="utf-8">
+  <title>{{ page_title_stripped }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if not page_description is empty %}
+  <meta name="description" content="{{ page_description_stripped }}">
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{{ absolutepath_page }}">
+
+  {# Google Authorship, Publisher and site-verification #}
+  {% if not page.accounts.google_author is empty %}<link rel="author" href="https://plus.google.com/{{ page.accounts.google_author }}">{% endif %}
+  {% if not page.accounts.google_publisher is empty %}<link rel="publisher" href="https://plus.google.com/{{ page.accounts.google_publisher }}">{% endif %}
+  {% if page.accounts.google_site_verification is not empty %}<meta name="google-site-verification" content="{{ page.accounts.google_site_verification }}">{% endif %}
+
+  {# Twitter Card data #}
+  {% if not page.accounts.twitter_username is empty %}<meta name="twitter:site" content="@{{ page.accounts.twitter_username }}">{% endif %}
+
+  {# Open Graph data #}
+  <meta property="og:title" content="{{ page_title_stripped }}">
+  {% if not page_description is empty %}<meta property="og:description" content="{{ page_description_stripped }}">{% endif %}
+  <meta property="og:url" content="{{ absolutepath_page }}">
+  <meta property="og:type" content="website">
+  <meta property="og:updated_time" content="{{ page.updated }}">
+  {% if not page.accounts.facebook_author is empty %}<meta property="article:author" content="{{ page.accounts.facebook_author }}">{% endif %}
+  {% if not page.accounts.facebook_publisher is empty %}<meta property="article:publisher" content="{{ page.accounts.facebook_publisher }}">{% endif %}
+  <meta property="og:image" content="{{ preview_image_full }}">
+
+  {# Icon #}
+  <link rel="icon" href="{{ assetspath }}/content/custom/favicon/favicon.png">
+
+  {# Atom Feed link #}
+  {% if page.settings.feed %}
+  <link href="{{ absolutepath }}/feed/" type="application/atom+xml" rel="alternate" title="Atom Feed">
+  {% endif %}
+
+  {# Add fallback for Skin CSS CDN fail #}
+  {% if page.settings.cdn_core %}
+  <script>
+var css_counter = 0;
+function imagevue_(){
+	css_counter ++;
+	if(css_counter === 1) imagevue();
+};
+function cssFail(){
+	css_counter --;
+	var l = document.createElement('link');
+	l.onload = imagevue_;
+	l.rel = 'stylesheet';
+	l.id = '{{ page.style.skin.skin }}';
+	l.href = '{{ rootpath }}/public/css/{{ page.stacey_version }}/x3.skin.{{ page.style.skin.skin }}.css';
+	document.getElementsByTagName('head')[0].appendChild(l);
+}
+  </script>
+  {% endif %}
+
+  {# Skin #}
+  <link rel=stylesheet id={{ page.style.skin.skin }} href="{{ cdn_core }}/css/{{ page.stacey_version }}/x3.skin.{{ page.style.skin.skin }}.css"{% if page.settings.cdn_core %} onerror="cssFail();"{% endif %}>
+
+	{# Google webfonts #}
+	{% if page.style.font.font is not empty and page.style.font.font != 'none' %}
+	<link rel=stylesheet href="https://fonts.googleapis.com/css?family={{ page.style.font.font|default("Lato:400,700,900,400italic,700italic,900italic")|getfontstring }}">
+	{% endif %}
+
+	{# Custom HEAD #}
+	{{ page.back.custom.head|removeComments|trim }}
+
+	{# Default fonts #}
+	{# Set here instead of in skin css to avoid problems with styler #}
+  <style id="default-fonts"><!-- body,h1,h2,h3,h4,h5,h6 {font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;} --></style>
+
+  {# Custom CSS #}
+  {% if page.back.custom.css is not empty %}
+  <style id="custom-css"><!-- {{ page.back.custom.css|minify }} --></style>
+  {% endif %}
+
+  {# Custom logo css #}
+  {% if page.back.custom.logo_css is not empty %}
+  <style id="logo"><!-- {{ page.back.custom.logo_css|minify }} --></style>
+  {% endif %}
+
+  {# Style elements for custom colors and x3 app #}
+  <style id="x3app"></style>
+  {#<style id="x3color"></style>#}
+
+</head>
+
+{% set layout = page.style.layout.layout|default('topbar-float') %}
+{% if 'topbar' in layout %}{% set fixed = page.style.layout.fixed %}{% endif %}
+{% if page.style.layout.wide %}{% set wide = 'wide' %}{% endif %}
+{% set data_layout = (page.include.body ~ ' ' ~ page.body ~ ' ' ~ layout ~ ' ' ~ page.style.skin.skin ~ ' ' ~ fixed ~ ' ' ~ wide ~ ' ' ~ page.style.skin.clear ~ ' x3-' ~ page.template_name ~ ' slug-' ~ page.slug|trim('/')|default('index') ~ ' page-' ~ page.permalink|trim('/')|replace({"/":"-"})|default('index'))|cleanData %}
+
+<body class="fa-loading initializing {{ data_layout }}" data-include="{{ page.include.body|cleanData }}">
+<div class=x3-loader title=loading></div>
+<div class=sb-site-container>
+  <div>
+
+    {# Header navigation #}
+    {% include 'partials/nav/header.html' %}
+
+  	<main class="main" id="content">

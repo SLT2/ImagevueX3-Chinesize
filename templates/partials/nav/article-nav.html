@@ -1,0 +1,19 @@
+{% spaceless %}
+
+{% if page.settings.pagenav and page.siblings_count > 0 and page.slug != "index" and page.children_count == 0 and not page.gallery.slideshow.background %}
+<div class=article-nav>
+
+	{% if not page.next_sibling[0] is empty %}
+		{% set next = getSibling(page.next_sibling[0]) %}
+		<a href='../{{ next }}/' class='next'><span>{{ next|title }}</span></a>
+	{% endif %}
+
+	{% if not page.previous_sibling[0] is empty %}
+		{% set previous = getSibling(page.previous_sibling[0]) %}
+		<a href='../{{ previous }}/' class='previous'><span>{{ previous|title }}</span></a>
+	{% endif %}
+
+</div>
+{% endif %}
+
+{% endspaceless %}

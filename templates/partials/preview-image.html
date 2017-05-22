@@ -1,0 +1,61 @@
+{% spaceless %}
+
+{% set page = p|default(page) %}
+{% set gallery_assets = page.gallery.assets|trim('/') %}
+
+{# Set URL as var #}
+{% set url %}
+
+{# Check if page template is file #}
+{% if page.template_name == 'file' %}
+	{{ page.file_path }}
+
+{# Check if page.image is set #}
+{% elseif page.image is not empty %}
+
+  {# If page.image root path is defined #}
+  {% if "/" in page.image %}
+    {{ "./content" ~ ("/" ~ page.image)|replace({'content/': '', './': ''})|replace({'//': '/'}) }}
+
+  {# if folder has no images, check if assets folder exists, retrieve from there instead #}
+  {#{% elseif page.images|length < 1 and exists(gallery_assets) %}
+    {{ get(gallery_assets).file_path }}/{{ page.image }}#}
+
+  {# else, get page.image from current page path #}
+  {% else %}
+    {{ page.file_path }}/{{ page.image }}
+  {% endif %}
+
+{# Get page.image from assets folder if set #}
+{#{% elseif exists(gallery_assets) and isAssets is empty %}
+	{% set pa = get(gallery_assets) %}
+	{% include 'partials/preview-image.html' with { 'p':pa, 'isAssets': true } %}#}
+
+{# preview.jpg exists? #}
+{% elseif exists(page.file_path ~ '/preview.jpg') %}
+  {{ page.file_path }}/preview.jpg
+
+{# Get page.image from first image in folder #}
+{% elseif not page.images|first is empty %}
+  {{ page.images|first }}
+
+{# Lets see if folder has children #}
+{#{% elseif page.children_count > 0 %}
+{% include 'partials/preview-image.html' with { 'p':page.children|last } %}#}
+
+{# Else, use image_default #}
+{% elseif page.image_default %}
+{{ "./content" ~ ("/" ~ page.image_default)|replace({'content/': '', './': ''})|replace({'//': '/'}) }}
+
+{% endif %}
+{% endset %}
+
+{# Check if extension is included #}
+{% set e_length = url|trim|split(".")|last|length %}
+{% if e_length < 2 or e_length > 4 %}
+{% set url = url|trim ~ ".jpg" %}
+{% endif %}
+
+{% endspaceless %}
+{# Output URL #}
+{{ url|trim }}

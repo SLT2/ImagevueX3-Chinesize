@@ -1,0 +1,72 @@
+
+{# Video #}
+
+{# myvideos object #}
+{% set myvideos = gallery.video %}
+
+{# Sort #}
+{% if settings.sort != 'shuffle' and settings.sortby != 'shuffle' %}
+
+	{# sort by title or date #}
+	{% if settings.sortby == 'title' %}
+		{% set myvideos = sortby(gallery.video, 'title', 'file_name') %}
+	{% elseif settings.sortby == 'date' %}
+		{% set myvideos = sortbydate(gallery.video, 'date') %}
+	{% elseif settings.sortby == 'custom' %}
+		{% set myvideos = sortby(gallery.video, 'index') %}
+	{% endif %}
+
+	{# Ascending/descending #}
+	{% if settings.sort == 'desc' %}
+		{% set myvideos = myvideos|reverse %}
+	{% endif %}
+{% endif %}
+
+{# loop #}
+{% for image in myvideos %}
+
+	{# title #}
+	{% set title = getDefault(image.title, settings.image.title, settings.image.title_include)|striptags('<a><span><em><i><b><strong><small><s><mark>')|replace({'{file_name}': image.file_name|removeExtension, '{file_name_ext}': image.file_name})|default(image.name) %}
+	{% set title_pseudo = title|replace({'<a': '<span', '</a>': '</span>', ' href=': ' data-href=', ' target=': ' data-target='}) %}
+
+	{# description #}
+	{% set image_description = getDefault(image.description, settings.image.description, settings.image.description_include) %}
+	{% if image_description is empty %}
+		{% set description = '' %}
+		{% set description_pseudo = '' %}
+	{% else %}
+		{% set description = image_description|striptags('<a><span><em><i><b><strong><small><s><br><mark><img><kbd><code><button>')|replace({'{file_name}': image.file_name|removeExtension, '{file_name_ext}': image.file_name}) %}
+		{% set description_pseudo = description|replace({'<a': '<span', '</a>': '</span>', ' href=': ' data-href=', ' target=': ' data-target='}) %}
+	{% endif %}
+
+	{# image.date #}
+	{% set date = image.date %}
+	{% if page.settings.date_format == 'timeago' %}
+		{% set date_formatted = date|date("d F Y") %}
+		{% set date_class = 'date timeago' %}
+	{% else %}
+		{% set date_formatted = date|date(page.settings.date_format|default('d F Y')) %}
+		{% set date_class = 'date' %}
+	{% endif %}
+	{% set time_tag = '<time itemprop=dateCreated datetime="' ~ date|date('c') ~ '" class="' ~ date_class ~ '">' ~ date_formatted ~ '</time>' %}
+
+	{# Meta #}
+	{% for item in items %}
+		{% if item == 'title' %}
+			<h2 class='title' itemprop='caption'>{{ title_pseudo }}</h2>
+		{% elseif item == 'description' and description is not empty %}
+		<p itemprop='description'>{{ description_pseudo }}</p>
+		{% elseif item == 'date' %}
+			<h6 class=date>{{time_tag}}</h6>
+		{% endif %}
+	{% endfor %}
+
+	{# embed #}
+	<video width="100%" controls class=x3-style-frame>
+		<source src="{{ assetspath ~ (gallery.file_path ~ "/" ~ image.file_name)|trim(".") }}" type="video/mp4">
+	</video>
+
+	{% if loop.index != gallery.video|length %}
+		<hr class=hr />
+	{% endif %}
+{% endfor %}

@@ -1,0 +1,12 @@
+{
+    "title": "404 page not found",
+    "description": "Page could not be found.",
+    "content": "<div class=text-center><i class=\"fa fa-ban fa-5x color-primary\"><\/i><\/div>\n<h1 class=\"title\">Page could not be found.<\/h1>\n<h2 class=\"subheader\">This page returned a \"404 Not Found\" error.<\/h2>\n",
+    "layout": {
+        "width": "narrower",
+        "classes": "text-center"
+    },
+    "context": {
+        "items": "content"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "title": "Examples",
+    "description": "A variety of page examples.",
+    "image": "3.examples\/assets\/american-football.jpg",
+    "menu": {
+        "type": "list"
+    },
+    "layout": {
+        "width": "narrow"
+    },
+    "context": {
+        "classes": "separator"
+    },
+    "folders": {
+        "crop": {
+            "enabled": true
+        },
+        "layout": "vertical",
+        "split": {
+            "enabled": true
+        },
+        "classes": "hr,frame,x3-hover-icon-asterisk-primary"
+    }
+}

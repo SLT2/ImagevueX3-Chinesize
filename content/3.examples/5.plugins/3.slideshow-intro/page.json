@@ -1,0 +1,20 @@
+{
+    "title": "Slideshow Intro",
+    "label": "Slideshow Intro",
+    "description": "An example using the gallery slideshow set to \"use as intro\" for a nice start-page effect.",
+    "image": "3.examples\/assets\/wayback.jpg",
+    "body": "hide-toolbar",
+    "content": "---\nWhen `use as intro` is enabled for your gallery slideshow layout, the slideshow will be placed at top of page, behind the main menu. The intro will inherit all other settings from your slideshow layout. This feature is useful for start pages and special feature pages.\n\n * *You can enable intro-plugin from **page › gallery › slideshow › use as intro.***\n  * *It is recommended to use the \"cover\" fit for slideshow intro.* \n\n",
+    "gallery": {
+        "layout": "slideshow",
+        "slideshow": {
+            "background": true,
+            "transition": "crossfade",
+            "loop": true,
+            "autoplay": true
+        },
+        "sortby": "shuffle",
+        "classes": "landscape",
+        "assets": "examples\/assets\/"
+    }
+}

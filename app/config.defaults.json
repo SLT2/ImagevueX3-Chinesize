@@ -1,0 +1,423 @@
+{
+		"title": null,
+    "label": null,
+    "description": null,
+    "date": null,
+    "image": null,
+    "image_default": "1.index/preview.jpg",
+    "link": {
+    	"url": null,
+    	"target": "auto",
+    	"width": 600,
+    	"height": 500,
+    	"content": false,
+    	"popup_class": null
+    },
+    "menu": {
+        "items": null,
+        "type": "normal",
+        "width": 320,
+        "hide": false,
+        "hide_children": false,
+        "hide_children_mobile": false,
+        "limit": 0,
+        "reverse": false,
+        "click_toggle": false,
+        "nolink": false,
+        "list": null,
+        "carousel_amount": 3,
+        "carousel_items": "title,amount,preview,description",
+        "data_items": "contactform,hr,icon-buttons",
+        "crop": {
+            "enabled": true,
+            "crop": [
+                3,
+                2
+            ]
+        },
+        "classes": null
+    },
+    "body": null,
+    "layout": {
+    		"items": "context,folders,gallery",
+    		"disqus": false,
+        "classes": null,
+        "width": "width-default"
+    },
+    "context": {
+    		"items": "title,description,content",
+    		"hide": false,
+    		"classes": null,
+    		"width": "narrower",
+    		"crop": {
+            "enabled": true,
+            "crop": [
+                2,
+                1
+            ]
+        },
+        "caption": {
+            "enabled": false,
+            "items": "title,date",
+            "hover": false,
+            "align": "caption-bottom-left"
+        }
+    },
+    "folders": {
+    		"hide": false,
+    		"items": "title,amount,folders_amount,description,preview",
+    		"width": "width-default",
+    		"sort": "asc",
+        "title_size": "small",
+        "assets": null,
+        "classes": "frame,text-center",
+        "limit": 0,
+        "split": {
+            "enabled": false,
+            "ratio": 6,
+            "invert": true
+        },
+        "crop": {
+            "enabled": false,
+            "crop": [
+                3,
+                2
+            ]
+        },
+        "caption": {
+            "enabled": false,
+            "items": "description",
+            "hover": false,
+            "align": "caption-bottom-left"
+        },
+        "tooltip": {
+            "enabled": false,
+            "items": "title,description"
+        },
+        "layout": "grid",
+        "vertical": {
+            "scrollnav": true,
+            "horizontal_rule": true
+        },
+        "grid": {
+            "use_width": false,
+            "columns": "3,2,1",
+            "column_width": 300,
+            "space": -1
+        },
+        "justified": {
+            "row_height": 300,
+            "space": 10,
+            "small_disabled": true
+        },
+        "columns": {
+            "use_width": true,
+            "column_width": 300,
+            "columns": 3,
+            "space": -1
+        },
+        "carousel": {
+            "use_height": false,
+            "amount": 3,
+            "target_height": 300,
+            "margin": 1,
+            "lazy": true,
+            "interval": 0,
+            "show_timer": true,
+            "background": false,
+            "nav": true,
+            "tabs": false,
+            "tabs_position": "top",
+            "loop": true
+        }
+    },
+    "gallery": {
+    		"hide": false,
+    		"items": "preview",
+    		"width": "width-default",
+    		"assets": null,
+    		"classes": "frame,text-center,hover",
+    		"sortby": "name",
+    		"sort": "asc",
+    		"title_size": "normal",
+    		"limit": 0,
+    		"split": {
+            "enabled": false,
+            "ratio": 6,
+            "invert": true
+        },
+        "crop": {
+            "enabled": false,
+            "crop": [
+                3,
+                2
+            ]
+        },
+        "caption": {
+            "enabled": false,
+            "items": "title",
+            "hover": false,
+            "align": "caption-bottom-left"
+        },
+        "tooltip": {
+            "enabled": false,
+            "items": "title,description"
+        },
+        "layout": "justified",
+        "vertical": {
+            "scrollnav": true,
+            "horizontal_rule": true
+        },
+        "grid": {
+            "use_width": false,
+            "columns": "3,2,1",
+            "column_width": 300,
+            "space": -1
+        },
+        "justified": {
+            "row_height": 300,
+            "space": 10,
+            "small_disabled": false
+        },
+        "columns": {
+            "use_width": true,
+            "column_width": 300,
+            "columns": 3,
+            "space": -1
+        },
+				"slideshow": {
+        		"background": false,
+		    		"menu_style": "menu-absolute-20",
+		    		"hide_context": false,
+		    		"hide_footer": false,
+            "width": "100%",
+            "height": "100%",
+            "ratio": null,
+            "nav": "none",
+            "fit": "cover",
+            "transition": "slide",
+            "duration": 500,
+            "captions": false,
+            "captions_hover": false,
+            "loop": false,
+            "autoplay": false,
+            "interval": 5000,
+            "start_fullscreen": false,
+            "toggle_play": true,
+            "hash": false,
+            "show_timer": true
+        },
+        "carousel": {
+            "use_height": false,
+            "amount": 3,
+            "target_height": 300,
+            "margin": 1,
+            "lazy": true,
+            "interval": 0,
+            "show_timer": true,
+            "background": false,
+            "nav": true,
+            "tabs": false,
+            "tabs_position": "top",
+            "loop": true
+        },
+        "image": {
+            "title": null,
+            "title_include": "default",
+            "description": null,
+            "description_include": "default",
+            "link": null,
+            "link_target": "auto",
+            "popup_width": 600,
+            "popup_height": 500
+        },
+        "embed": null
+    },
+    "content": null,
+    "include": {
+    	"body": null,
+    	"layout": null,
+    	"context": "text-center",
+    	"folders": null,
+    	"gallery": null,
+    	"content_prepend": null,
+    	"content_append": null
+    },
+    "plugins":{
+    	"image_background":{
+    		"enabled": false,
+    		"src": null,
+    		"custom_height": true,
+    		"height": "80%",
+    		"size": "cover",
+    		"fixed": false,
+    		"position": "50% 50%",
+    		"below_menu": true,
+    		"menu_style": "menu-absolute-20",
+    		"page_meta_title": true,
+    		"page_meta_description": true,
+    		"page_meta_content": false,
+    		"hide_context": false,
+    		"hide_footer": false
+    	},
+    	"background":{
+    		"enabled": false,
+    		"src": null,
+    		"color": null,
+    		"attach": "page",
+    		"menu_style": null,
+    		"fixed": false,
+    		"size": "100%",
+    		"repeat": "repeat",
+    		"position": "50% 0%"
+    	},
+    	"video_background":{
+    		"src": null,
+    		"poster": null,
+    		"poster_mobile": null,
+    		"menu_style": "menu-absolute-20",
+    		"height": 100,
+    		"autoplay": true,
+    		"toggleplay": true,
+    		"loop": true,
+    		"muted": true,
+    		"hide_context": false,
+    		"hide_footer": false
+    	},
+    	"fotomoto":{
+    		"enabled": false,
+    		"store_id": null,
+    		"enabled_page": false,
+    		"collection": null,
+    		"buy_button": true,
+    		"buy_button_text": "Buy",
+    		"buy_button_popup": "mobile",
+    		"mobile_disabled": true
+    	},
+    	"audioplayer":{
+    		"enabled": false,
+    		"autoplay": false,
+    		"loop": true,
+    		"volume": 1.0,
+    		"shuffle": false,
+    		"disabled_mobile": true
+    	}
+    },
+    "accounts": {},
+	  "style": {
+	  		"styler": true,
+        "layout": {
+            "layout": "topbar-center",
+            "fixed": "topbar-fixed-up",
+            "wide": false
+        },
+        "skin": {
+            "skin": "daylight",
+            "primary_color": null,
+            "clear": "clear"
+        },
+        "font": {
+            "font": "Lato:400,400italic,700,700italic|subheader:italic|topbar:uppercase,large|sidebar:uppercase,small|footer:italic|styled:italic"
+        },
+        "logo": {
+        		"enabled": true,
+            "use_image": false,
+            "title": "Flame Pix",
+            "logo_3d": true,
+            "logo_3d_synch": true
+        }
+    },
+		"settings": {
+				"diagnostics": true,
+	      "cdn_core": true,
+	      "preload": false,
+	      "pagenav": true,
+	      "cdn": null,
+	      "base_url": null,
+	      "date_format": "timeago",
+	      "hide_images": "double",
+	      "prevent_context": false,
+	      "sitemap": true,
+	      "feed": true,
+        "menu_manual": true,
+        "menu_super": false,
+        "menu_disabled": false
+	  },
+	  "popup": {
+	      "enabled": true,
+	      "hide_caption": true,
+	      "transitions": true,
+	      "history": true,
+	      "shareEl": true,
+	      "zoomEl": true,
+	      "captionEl": true,
+	      "caption_centered": true,
+	      "caption": {
+	          "title": true,
+	          "description": true,
+	          "date": false,
+	          "exif": false
+	      },
+	      "bgOpacity": 0.95
+	  },
+	  "toolbar": {
+	      "enabled": true,
+	      "enabled_popup": true,
+	      "enabled_mobile": false,
+	      "share_hover": true,
+	      "share_click": true,
+	      "show_label": true,
+	      "auto_hide": true,
+	      "hide_button": false,
+	      "overlay_fun": true,
+	      "breakpoint": 0,
+	      "top": 0,
+	      "side": "auto",
+	      "hover_intent": false,
+	      "fade_out": false,
+	      "addthis": false,
+	      "items": "{\r\n  \"items\": [\r\n    {\r\n      \"id\": \"share\",\r\n      \"icon\": \"share\",\r\n      \"label\": \"Share\"\r\n    },\r\n    {\r\n      \"id\": \"facebook\",\r\n      \"icon\": \"facebook\",\r\n      \"label\": \"Share on Facebook\",\r\n      \"url\": \"https:\/\/www.facebook.com\/sharer\/sharer.php?u={{url}}\"\r\n    },\r\n    {\r\n      \"id\": \"twitter\",\r\n      \"icon\": \"twitter\",\r\n      \"label\": \"Tweet\",\r\n      \"url\": \"https:\/\/twitter.com\/intent\/tweet?text={{text}}&url={{url}}\"\r\n    },\r\n    {\r\n      \"id\": \"google\",\r\n      \"icon\": \"google-plus\",\r\n      \"label\": \"Share on Google +\",\r\n      \"url\": \"https:\/\/plus.google.com\/share?url={{url}}\"\r\n    },\r\n    {\r\n      \"id\": \"pinterest\",\r\n      \"icon\": \"pinterest-p\",\r\n      \"label\": \"Pin it\",\r\n      \"url\": \"http:\/\/www.pinterest.com\/pin\/create\/button\/?url={{url}}&media={{image_url}}&description={{text}}\"\r\n    },\r\n    {\r\n      \"id\": \"linkedin\",\r\n      \"icon\": \"linkedin\",\r\n      \"label\": \"Share on Linkedin\",\r\n      \"url\": \"http:\/\/www.linkedin.com\/shareArticle?mini=true&url={{url}}&title={{text}}\",\r\n      \"display\": \"overlay\"\r\n    },\r\n    {\r\n      \"id\": \"vkontakte\",\r\n      \"icon\": \"vk\",\r\n      \"label\": \"Share on vKontakte\",\r\n      \"url\": \"http:\/\/vk.com\/share.php?url={{url}}\",\r\n      \"display\": \"overlay\"\r\n    },\r\n    {\r\n      \"id\": \"tumblr\",\r\n      \"icon\": \"tumblr\",\r\n      \"label\": \"Share on Tumblr\",\r\n      \"url\": \"http:\/\/www.tumblr.com\/share?v=3&u={{url}}&t={{text}}&s=\",\r\n      \"display\": \"overlay\"\r\n    },\r\n    {\r\n      \"id\": \"mailto\",\r\n      \"icon\": \"envelope\",\r\n      \"label\": \"Share by Email\",\r\n      \"url\": \"mailto:?subject={{text}}&body=Hi,%0D%0A%0D%0A{{description}}%0D%0A{{url}}\",\r\n      \"color\": \"#00bcf2\",\r\n      \"display\": \"overlay|popup\"\r\n    },\r\n    {\r\n      \"id\": \"comment\",\r\n      \"icon\": \"comment\",\r\n      \"label\": \"Post Comment\"\r\n    },\r\n    {\r\n      \"id\": \"download\",\r\n      \"icon\": \"download\",\r\n      \"label\": \"Download\",\r\n      \"url\": \"{{raw_image_url}}\"\r\n    }\r\n  ]\r\n}"
+	  },
+	  "back": {
+	  		"custom": {
+	        "footer": "<!-- ICON BUTTONS START -->\r\n<div class=\"icon-buttons hover-color hover-title\">\r\n  <a href=\"https:\/\/www.facebook.com\/imagevue\"><\/a>\r\n  <a href=\"https:\/\/plus.google.com\/+imagevue\"><\/a>\r\n  <a href=\"https:\/\/twitter.com\/imagevue\"><\/a>\r\n  <a href=\"\/contact\/\" title=\"Contact me\"><\/a>\r\n\r\n  <!-- MORE EXAMPLES -->\r\n  <!-- <a href=\"https:\/\/flamepix.com\" data-icon=\"fire\" data-color=\"brown\"><\/a>\r\n  <a href=\"https:\/\/mjau-mjau.com\" data-icon=\"paw\" data-color=\"#FFC000\"><\/a>\r\n  <a href=\"https:\/\/github.com\/mjau-mjau\" title=\"Mjau-mjau on Github!\"><\/a>\r\n  <a href=\"https:\/\/demo.flamepix.com\" data-popup title=\"X3 Demo in popup\" data-icon=\"desktop\"><\/a>\r\n  <a href=\"https:\/\/www.youtube.com\/embed\/G46ygBKsTZI\" data-popup data-popup-class=\"x3-popup-iframe-full\" title=\"Youtube Video in popup\"><\/a>\r\n  <a data-popup-content=\"<h2>Popup Data Content<\/h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies massa vel tellus tincidunt facilisis.<\/p>\" title=\"Content in popup\" data-icon=\"code\" data-color=\"tan\"><\/a>\r\n  <a href=\"https:\/\/demo.flamepix.com\/render\/w1024-q90\/3.examples\/assets\/corn-field.jpg\" data-icon=\"photo\" data-popup-group=\"image\" title=\"Corn Field\"><\/a>\r\n  <a href=\"https:\/\/demo.flamepix.com\/render\/w1024-q90\/3.examples\/assets\/crispy-chocolate.jpg\" data-icon=\"camera-retro\" data-popup-group=\"image\" title=\"Crispy Chocolate\"><\/a> -->\r\n\r\n<\/div>\r\n<!-- ICON BUTTONS END -->\r\n\r\n<!-- Add a dynamic website link '\u00a9 year website' at bottom of footer -->\r\n{{copy}}",
+	        "contact_widget": "<form data-abide class=contactform>\r\n\t<div>\r\n\t\t<xinput required type=text name=\"name\" placeholder=\"Name\">\r\n\t<\/div>\r\n\t<div>\r\n\t\t<xinput required type=\"email\" name=\"email\" placeholder=\"Email\">\r\n\t<\/div>\r\n\t<div>\r\n\t\t<textarea required name=\"message\" placeholder=\"What's up?\"><\/textarea>\r\n\t<\/div>\r\n\t<button type=submit>Send<\/button>\r\n<\/form>",
+	        "logo_css": ".logo {\r\n  font-size: 2em;   \/* logo-size (only affects TEXT-logo)   *\/\r\n  padding: 1em 0;   \/* Adjust space above- and below logo   *\/\r\n  margin-top: 0em;  \/* Adjust margin above logo             *\/\r\n}\r\n.logo > img {\r\n  width: 300px;     \/* logo-size (only affects IMAGE-logo)  *\/\r\n}"
+	    },
+	    "panel": {
+		      "use_db": false,
+		      "username": "admin",
+		      "password": "admin",
+		      "first_name": "First",
+		      "last_name": "Last",
+		      "email": "you@email.com",
+		      "db_host": null,
+          "db_user": null,
+          "db_pass": null,
+          "db_name": null,
+          "cloudflare_enabled": false,
+          "cloudflare_email": null,
+          "cloudflare_key": null,
+		      "upload_resize": {
+		          "enabled": true,
+		          "width": 1600,
+		          "height": 1600,
+		          "quality": 95,
+		          "orientation": false
+		      },
+		      "language": "English"
+		  },
+		  "mail": {
+		      "subject": "%domain% | New message from %name%",
+		      "template": "<strong>From:<\/strong> %name% <a href='mailto:%email%'>%email%<\/a><br>\r\n%page%<br>\r\n<br>\r\n<strong>Message<\/strong><br>\r\n%message%",
+		      "SMTPAuth": true,
+		      "SMTPSecure": "tls",
+		      "port": 587,
+		      "use_smtp": false,
+		      "host": null,
+		      "username": null,
+		      "password": null,
+		      "debug": false
+		  }
+	  }
+}

@@ -1,0 +1,14 @@
+{
+    "audio": [
+    	{% for sound in page.mp3 %}
+        {
+            "title": "{{ sound.title|default(sound.name) }}",
+            {% if not sound.author is empty %}"author": "{{ sound.author|escape }}",{% endif %}
+            {% if not sound.album is empty %}"album": "{{ sound.album|escape }}",{% endif %}
+            {% if not sound.spotify is empty %}"spotify": "{{ sound.spotify|trim|escape }}",{% endif %}
+            "file_name": "{{ sound.file_name|escape }}",
+            "url": "{{ page.base_url|replace({(page.domain_name): ''}) ~ sound.url|trim(".")|escape }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}

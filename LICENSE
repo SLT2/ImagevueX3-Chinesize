@@ -1,0 +1,21 @@
+Imagevue X3 (c) 2016
+Imagevue X3 templates, CSS and javascripts
+
+[SPECIAL THANKS]
+PHP structure based on an extended version of "Stacey" http://staceyapp.com/
+Copyright Anthony Kolber
+
+[THANKS]
+Assistance in creating admin management panel http://codstack.com/
+Foundation Framework http://foundation.zurb.com/
+jQuery and mentionable plugins
+	http://fotorama.io/ - Beautiful swipeable slideshow module
+	http://photoswipe.com/ - The best foundation for a beautiful popup window
+	http://formstone.it/components/pronto - A good start for proper ajax-based pages
+	http://collageplus.edlea.com/ - A fine plugin for justified gallery elements
+	http://imakewebthings.com/jquery-waypoints/ - Events for scrolling
+	http://stringjs.com/ - Javascript string parsing functions
+	https://github.com/allmarkedup/purl - Parse some URLs for me please
+TWIG template engine http://twig.sensiolabs.org/
+Markdown content https://daringfireball.net/projects/markdown/
+PHP Image resizer https://github.com/lencioni/SLIR/

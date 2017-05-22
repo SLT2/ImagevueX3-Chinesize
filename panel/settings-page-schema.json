@@ -1,0 +1,2811 @@
+{
+  "schema": {
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "title": "Default Page Description"
+    },
+    "date": {
+      "type": "string",
+      "title": "Default Page Date"
+    },
+    "image": {
+      "type": "string",
+      "title": "Default Page Preview Image"
+    },
+    "body": {
+      "type": "string",
+      "title": "Default body classes"
+    },
+    "content": {
+      "type": "string"
+    },
+    "link": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string",
+           "enum": [
+            "auto",
+            "_self",
+            "_blank",
+            "popup",
+            "x3_popup"
+          ]
+        },
+        "width": {
+        	"type": "number",
+        	"minimum": 100
+        },
+        "height": {
+        	"type": "number",
+        	"minimum": 100
+        },
+        "content": {
+        	"type": "boolean"
+        },
+        "popup_class": {
+        	"type": "string"
+        }
+      }
+    },
+    "menu": {
+      "type": "object",
+      "properties": {
+        "carousel_items": {
+          "type": "string"
+        },
+        "data_items": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+          	"normal",
+            "list",
+            "carousel",
+            "data"
+          ]
+        },
+        "width": {
+          "type": "integer"
+        },
+        "hide": {
+          "type": "boolean"
+        },
+        "hide_children": {
+          "type": "boolean"
+        },
+        "hide_children_mobile": {
+          "type": "boolean"
+        },
+        "reverse": {
+          "type": "boolean"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "click_toggle": {
+          "type": "boolean"
+        },
+        "nolink": {
+          "type": "boolean"
+        },
+        "list": {
+          "type": "string"
+        },
+        "carousel_amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "crop": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "crop": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0.2,
+                "maximum": 5
+              }
+            }
+          }
+        },
+        "classes": {
+        	"type": "string"
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "title": "Layout",
+      "properties": {
+        "items": {
+          "title": "Items",
+          "type": "string"
+        },
+        "disqus": {
+        	"type": "boolean"
+        },
+        "classes": {
+          "title": "Layout Classes",
+          "type": "string"
+        },
+        "width": {
+          "title": "Width",
+          "type": "string",
+          "enum": [
+            "wide",
+            "width-default",
+            "narrow",
+            "narrower",
+            "narrowest"
+          ]
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "title": "Context",
+      "properties": {
+        "items": {
+          "title": "Items",
+          "type": "string"
+        },
+        "hide": {
+          "title": "Hide",
+          "type": "boolean"
+        },
+        "classes": {
+          "title": "Context Classes",
+          "type": "string"
+        },
+        "width": {
+          "title": "Width",
+          "type": "string",
+          "enum": [
+            "wide",
+            "width-default",
+            "narrow",
+            "narrower",
+            "narrowest"
+          ]
+        },
+        "crop": {
+          "type": "object",
+          "title": "Crop",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "crop": {
+              "title": "Crop Aspect",
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0.2,
+                "maximum": 5
+              }
+            }
+          }
+        },
+        "caption": {
+          "type": "object",
+          "title": "Caption",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "items": {
+              "title": "Caption Items",
+              "type": "string"
+            },
+            "hover": {
+              "title": "Caption Hover",
+              "type": "boolean"
+            },
+            "align": {
+              "title": "Caption Align",
+              "type": "string",
+              "enum": [
+                "caption-bottom-left",
+                "caption-bottom",
+                "caption-bottom-right",
+                "caption-top-left",
+                "caption-top",
+                "caption-top-right"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "folders": {
+      "type": "object",
+      "title": "Folders",
+      "properties": {
+        "hide": {
+          "title": "Hide",
+          "type": "boolean"
+        },
+        "items": {
+          "title": "Items",
+          "type": "string"
+        },
+        "assets": {
+          "title": "Assets"
+        },
+        "width": {
+          "title": "Width",
+          "type": "string",
+          "enum": [
+            "wide",
+            "width-default",
+            "narrow",
+            "narrower",
+            "narrowest"
+          ]
+        },
+        "sort": {
+          "title": "Sort Order",
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc",
+            "shuffle"
+          ]
+        },
+        "title_size": {
+          "title": "Title Size",
+          "type": "string",
+          "enum": [
+            "xxlarge",
+            "xlarge",
+            "large",
+            "normal",
+            "small",
+            "xsmall",
+            "xxsmall"
+          ]
+        },
+        "classes": {
+          "title": "Classes",
+          "type": "string"
+        },
+        "limit": {
+          "title": "Limit",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999
+        },
+        "split": {
+          "type": "object",
+          "title": "Split",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "ratio": {
+              "title": "Ratio",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 11
+            },
+            "invert": {
+              "title": "Invert",
+              "type": "boolean"
+            }
+          }
+        },
+        "crop": {
+          "type": "object",
+          "title": "Crop",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "crop": {
+              "title": "Crop Aspect",
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0.2,
+                "maximum": 5
+              }
+            }
+          }
+        },
+        "caption": {
+          "type": "object",
+          "title": "Caption",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "items": {
+              "title": "Caption Items",
+              "type": "string"
+            },
+            "hover": {
+              "title": "Caption Hover",
+              "type": "boolean"
+            },
+            "align": {
+              "title": "Caption Align",
+              "type": "string",
+              "enum": [
+                "caption-bottom-left",
+                "caption-bottom",
+                "caption-bottom-right",
+                "caption-top-left",
+                "caption-top",
+                "caption-top-right"
+              ]
+            }
+          }
+        },
+        "tooltip": {
+          "type": "object",
+          "title": "Tooltip",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "items": {
+              "title": "Items",
+              "type": "string"
+            }
+          }
+        },
+        "layout": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "grid",
+            "vertical",
+            "justified",
+            "columns",
+            "carousel"
+          ]
+        },
+        "vertical": {
+          "type": "object",
+          "title": "Vertical",
+          "properties": {
+            "scrollnav": {
+              "title": "Scrollnav",
+              "type": "boolean"
+            },
+            "horizontal_rule": {
+              "title": "Horizontal Rule",
+              "type": "boolean"
+            }
+          }
+        },
+        "grid": {
+          "type": "object",
+          "title": "Grid",
+          "properties": {
+            "use_width": {
+              "title": "Use Width",
+              "type": "boolean"
+            },
+            "columns": {
+              "title": "Columns",
+              "type": "string"
+            },
+            "column_width": {
+              "title": "Column Width",
+              "type": "integer",
+              "minimum": 50,
+              "maximum": 1000
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer",
+              "minimum": -1,
+              "maximum": 100
+            }
+          }
+        },
+        "justified": {
+          "type": "object",
+          "title": "Justified",
+          "properties": {
+            "row_height": {
+              "title": "Row Height",
+              "type": "integer",
+              "minimum": 50,
+              "maximum": 1000
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "small_disabled": {
+              "type": "boolean"
+            }
+          }
+        },
+        "columns": {
+          "type": "object",
+          "title": "Columns",
+          "properties": {
+            "use_width": {
+              "title": "Use Width",
+              "type": "boolean"
+            },
+            "column_width": {
+              "title": "Column Width",
+              "type": "integer",
+              "minimum": 50,
+              "maximum": 1000
+            },
+            "columns": {
+              "title": "Columns",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer",
+              "minimum": -1,
+              "maximum": 100
+            }
+          }
+        },
+        "carousel": {
+          "type": "object",
+          "title": "Carousel",
+          "properties": {
+            "use_height": {
+              "title": "Use Height",
+              "type": "boolean"
+            },
+            "amount": {
+              "title": "Amount",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "target_height": {
+              "title": "Target Height",
+              "type": "integer",
+              "minimum": 50,
+              "maximum": 1000
+            },
+            "margin": {
+              "title": "Margin",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "lazy": {
+              "title": "Lazy",
+              "type": "boolean"
+            },
+            "interval": {
+              "title": "Interval",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "show_timer": {
+              "title": "Show Timer",
+              "type": "boolean"
+            },
+            "background": {
+              "title": "Background",
+              "type": "boolean"
+            },
+            "nav": {
+              "title": "Show Nav",
+              "type": "boolean"
+            },
+            "tabs": {
+              "type": "boolean"
+            },
+            "tabs_position": {
+              "type": "string",
+              "enum": [
+		            "top",
+		            "bottom"
+		          ]
+            },
+            "loop": {
+              "title": "Loop",
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "popup": {
+		  "type": "object",
+		  "title": "Popup",
+		  "properties": {
+		    "captionEl": {
+		      "type": "boolean"
+		    },
+        "caption": {
+          "type": "object",
+          "properties": {
+            "exif": {
+              "type": "boolean"
+            }
+          }
+        }
+		  }
+		},
+    "gallery": {
+      "type": "object",
+      "title": "Gallery",
+      "properties": {
+        "hide": {
+          "title": "Hide",
+          "type": "boolean"
+        },
+        "assets": {
+          "title": "Assets"
+        },
+        "items": {
+          "title": "Items",
+          "type": "string"
+        },
+        "width": {
+          "title": "Width",
+          "type": "string",
+          "enum": [
+            "wide",
+            "width-default",
+            "narrow",
+            "narrower",
+            "narrowest"
+          ]
+        },
+        "sortby": {
+          "type": "string",
+          "enum": [
+            "name",
+            "title",
+            "date",
+            "shuffle",
+            "custom"
+          ]
+        },
+        "sort": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "title_size": {
+          "title": "Title Size",
+          "type": "string",
+          "enum": [
+            "xxlarge",
+            "xlarge",
+            "large",
+            "normal",
+            "small",
+            "xsmall",
+            "xxsmall"
+          ]
+        },
+        "classes": {
+          "title": "Classes",
+          "type": "string"
+        },
+        "limit": {
+          "title": "Limit",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999
+        },
+        "embed": {
+        	"title": "Embed",
+        	"type": "string"
+        },
+        "split": {
+          "type": "object",
+          "title": "Split",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "ratio": {
+              "title": "Ratio",
+              "type": "integer"
+            },
+            "invert": {
+              "title": "Invert",
+              "type": "boolean"
+            }
+          }
+        },
+        "crop": {
+          "type": "object",
+          "title": "Crop",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "crop": {
+              "title": "Crop Aspect",
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0.2,
+                "maximum": 5
+              }
+            }
+          }
+        },
+        "caption": {
+          "type": "object",
+          "title": "Caption",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "items": {
+              "title": "Caption Items",
+              "type": "string"
+            },
+            "hover": {
+              "title": "Caption Hover",
+              "type": "boolean"
+            },
+            "align": {
+              "title": "Caption Align",
+              "type": "string",
+              "enum": [
+                "caption-bottom-left",
+                "caption-bottom",
+                "caption-bottom-right",
+                "caption-top-left",
+                "caption-top",
+                "caption-top-right"
+              ]
+            }
+          }
+        },
+        "tooltip": {
+          "type": "object",
+          "title": "Tooltip",
+          "properties": {
+            "enabled": {
+              "title": "Enabled",
+              "type": "boolean"
+            },
+            "items": {
+              "title": "Items",
+              "type": "string"
+            }
+          }
+        },
+        "layout": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "grid",
+            "vertical",
+            "justified",
+            "columns",
+            "carousel",
+            "slideshow"
+          ]
+        },
+        "vertical": {
+          "type": "object",
+          "title": "Vertical",
+          "properties": {
+            "scrollnav": {
+              "title": "Scrollnav",
+              "type": "boolean"
+            },
+            "horizontal_rule": {
+              "title": "Horizontal Rule",
+              "type": "boolean"
+            }
+          }
+        },
+        "grid": {
+          "type": "object",
+          "title": "Grid",
+          "properties": {
+            "use_width": {
+              "title": "Use Width",
+              "type": "boolean"
+            },
+            "columns": {
+              "title": "Columns",
+              "type": "string"
+            },
+            "column_width": {
+              "title": "Column Width",
+              "type": "integer"
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer"
+            }
+          }
+        },
+        "justified": {
+          "type": "object",
+          "title": "Justified",
+          "properties": {
+            "row_height": {
+              "title": "Row Height",
+              "type": "integer"
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer"
+            },
+            "small_disabled": {
+              "type": "boolean"
+            }
+          }
+        },
+        "columns": {
+          "type": "object",
+          "title": "Columns",
+          "properties": {
+            "use_width": {
+              "title": "Use Width",
+              "type": "boolean"
+            },
+            "column_width": {
+              "title": "Column Width",
+              "type": "integer"
+            },
+            "columns": {
+              "title": "Columns",
+              "type": "integer"
+            },
+            "space": {
+              "title": "Space",
+              "type": "integer"
+            }
+          }
+        },
+        "carousel": {
+          "type": "object",
+          "title": "Carousel",
+          "properties": {
+            "use_height": {
+              "title": "Use Height",
+              "type": "boolean"
+            },
+            "amount": {
+              "title": "Amount",
+              "type": "integer"
+            },
+            "target_height": {
+              "title": "Target Height",
+              "type": "integer"
+            },
+            "margin": {
+              "title": "Margin",
+              "type": "integer"
+            },
+            "lazy": {
+              "title": "Lazy",
+              "type": "boolean"
+            },
+            "interval": {
+              "title": "Interval",
+              "type": "integer"
+            },
+            "show_timer": {
+              "title": "Show Timer",
+              "type": "boolean"
+            },
+            "background": {
+              "title": "Background",
+              "type": "boolean"
+            },
+            "nav": {
+              "title": "Show Nav",
+              "type": "boolean"
+            },
+            "tabs": {
+              "type": "boolean"
+            },
+            "tabs_position": {
+              "type": "string",
+              "enum": [
+		            "top",
+		            "bottom"
+		          ]
+            },
+            "loop": {
+              "title": "Loop",
+              "type": "boolean"
+            }
+          }
+        },
+        "slideshow": {
+          "type": "object",
+          "title": "Slideshow",
+          "properties": {
+          	"background": {
+		          "type": "boolean"
+		        },
+		        "menu_style": {
+		          "type": "string",
+		          "enum": [
+		            "menu-absolute-default",
+		            "menu-absolute",
+		            "menu-absolute-20",
+		            "menu-absolute-50"
+		          ]
+		        },
+		        "hide_context": {
+		          "type": "boolean"
+		        },
+		        "hide_footer": {
+		          "type": "boolean"
+		        },
+            "width": {
+              "title": "Width",
+              "type": "string"
+            },
+            "height": {
+              "title": "Height",
+              "type": "string"
+            },
+            "ratio": {
+              "title": "Ratio",
+              "type": "string"
+            },
+            "nav": {
+              "title": "Nav",
+              "type": "string",
+              "enum": [
+                "dots",
+                "thumbs",
+                "none"
+              ]
+            },
+            "fit": {
+              "title": "Fit",
+              "type": "string",
+              "enum": [
+                "cover",
+                "contain",
+                "scaledown",
+                "none"
+              ]
+            },
+            "transition": {
+              "title": "Transition",
+              "type": "string",
+              "enum": [
+                "slide",
+                "crossfade",
+                "dissolve"
+              ]
+            },
+            "duration": {
+              "title": "Duration",
+              "type": "integer"
+            },
+            "captions": {
+              "title": "Captions",
+              "type": "boolean"
+            },
+            "captions_hover": {
+              "title": "Captions Hover",
+              "type": "boolean"
+            },
+            "loop": {
+              "title": "Loop",
+              "type": "boolean"
+            },
+            "autoplay": {
+              "title": "Autoplay",
+              "type": "boolean"
+            },
+            "interval": {
+              "title": "Interval",
+              "type": "integer"
+            },
+            "start_fullscreen": {
+              "title": "Start Fullscreen",
+              "type": "boolean"
+            },
+            "toggle_play": {
+              "title": "Toggle Play",
+              "type": "boolean"
+            },
+            "hash": {
+              "title": "Hash",
+              "type": "boolean"
+            },
+            "show_timer": {
+              "title": "Show Timer",
+              "type": "boolean"
+            }
+          }
+        },
+        "image":{
+        	"type": "object",
+          "title": "Image Defaults",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "title_include": {
+		          "type": "string",
+		          "enum": [
+		            "default",
+		            "prepend",
+		            "append"
+		          ]
+		        },
+            "description": {
+              "type": "string"
+            },
+            "description_include": {
+		          "type": "string",
+		          "enum": [
+		            "default",
+		            "prepend",
+		            "append"
+		          ]
+		        },
+            "link": {
+              "type": "string"
+            },
+            "link_target": {
+		          "type": "string",
+		          "enum": [
+		            "auto",
+		            "_self",
+		            "_blank",
+		            "popup",
+		            "x3_popup"
+		          ]
+		        },
+		        "popup_width": {
+              "type": "number",
+              "minimum": 100,
+              "maximum": 9990
+            },
+		        "popup_height": {
+              "type": "number",
+              "minimum": 100,
+              "maximum": 9990
+            }
+          }
+        }
+      }
+    },
+    "plugins":{
+    	"type": "object",
+      "title": "Plugins",
+      "properties": {
+      	"image_background":{
+      		"type": "object",
+      		"properties": {
+      			"enabled": {
+		          "type": "boolean"
+		        },
+      			"src": {
+		          "type": "string"
+		        },
+		        "custom_height": {
+		          "type": "boolean"
+		        },
+		        "height": {
+		          "type": "string"
+		        },
+		        "size": {
+		          "type": "string"
+		        },
+		        "fixed": {
+		          "type": "boolean"
+		        },
+		        "position": {
+		          "type": "string"
+		        },
+		        "below_menu": {
+		          "type": "boolean"
+		        },
+		        "menu_style": {
+		          "type": "string",
+		          "enum": [
+		            "menu-absolute-default",
+		            "menu-absolute",
+		            "menu-absolute-20",
+		            "menu-absolute-50"
+		          ]
+		        },
+		        "page_meta_title": {
+		          "type": "boolean"
+		        },
+		        "page_meta_description": {
+		          "type": "boolean"
+		        },
+		        "page_meta_content": {
+		          "type": "boolean"
+		        },
+		        "hide_context": {
+		          "type": "boolean"
+		        },
+		        "hide_footer": {
+		          "type": "boolean"
+		        }
+      		}
+      	},
+      	"background":{
+      		"properties": {
+      			"enabled": {
+		          "type": "boolean"
+		        },
+      			"src": {
+		          "type": "string"
+		        },
+		        "color": {
+		          "type": "string"
+		        },
+		        "attach": {
+		          "type": "string",
+		          "enum": [
+		            "page",
+		            "content"
+		          ]
+		        },
+		        "menu_style": {
+		          "type": "string",
+		          "enum": [
+		            "",
+		            "menu-a-white",
+		            "menu-a-20",
+		            "menu-a-50"
+		          ]
+		        },
+		        "size": {
+		          "type": "string"
+		        },
+		        "fixed": {
+		          "type": "boolean"
+		        },
+		        "repeat": {
+		          "type": "string",
+		          "enum": [
+		            "repeat",
+		            "repeat-x",
+		            "repeat-y",
+		            "no-repeat"
+		          ]
+		        },
+		        "position": {
+		          "type": "string"
+		        }
+      		}
+      	},
+      	"video_background":{
+      		"title": "Video intro",
+      		"properties": {
+      			"src": {
+		          "type": "string"
+		        },
+		        "poster": {
+		          "type": "string"
+		        },
+		        "poster_mobile": {
+		          "type": "string"
+		        },
+		        "menu_style": {
+		          "type": "string",
+		          "enum": [
+		            "",
+		            "menu-absolute",
+		            "menu-absolute-20",
+		            "menu-absolute-50"
+		          ]
+		        },
+		        "height": {
+		          "type": "integer",
+		          "minimum": 0,
+          		"maximum": 100
+		        },
+		        "autoplay": {
+		          "type": "boolean"
+		        },
+		        "toggleplay": {
+		          "type": "boolean"
+		        },
+		        "loop": {
+		          "type": "boolean"
+		        },
+		        "muted": {
+		          "type": "boolean"
+		        },
+		        "hide_context": {
+		          "type": "boolean"
+		        },
+		        "hide_footer": {
+		          "type": "boolean"
+		        }
+      		}
+      	},
+      	"fotomoto":{
+      		"type": "object",
+      		"title": "Fotomoto",
+      		"properties": {
+		        "enabled_page": {
+		          "type": "boolean"
+		        },
+		        "collection": {
+		          "type": "string"
+		        },
+		        "buy_button": {
+		          "type": "boolean"
+		        }
+      		}
+      	}
+      }
+    }
+  },
+  "form": [
+    {
+      "type": "fieldset",
+      "title": "详情",
+      "htmlClass": "zebra2",
+      "items": [
+      	{
+          "type": "help",
+          "helpvalue": "<h2>详情</h2>主页详情. <a href=# class=show-help></a><div class=hidden><h3>页面详情</h3><p>这里添加主页详情.</p><p><em>* 如果没有别的，你应该总是创建一个页面<code>title</code>.</em></p></div>"
+        },
+        {
+          "key": "title",
+          "title": "标题 <span>* 推荐</span><a href=# class=show-help></a><div class=hidden><h2>页面标题</h2><p>这是你网页的主要标题。如果你没有设置页面标题, 标题将从<em>文件夹名</em>继承. 页面标题用于以下内容:</p><ul><li><code>&lt;h1&gt;</code> 大标题在页面内容的顶部。 </li><li><code>&lt;title&gt;</code> 标签用于SEO和社会共享。</li><li>页面/文件夹列表页.</li><li>转盘-列表超级菜单.</li></ul><h4>HTML 标签</h4><p><em>一些</em> HTML标签在页面标题中被支持:<br><span class=code-inline-block><code>&lt;a&gt;</code><code>&lt;span&gt;</code><code>&lt;em&gt;</code><code>&lt;i&gt;</code><code>&lt;b&gt;</code><code>&lt;strong&gt;</code><code>&lt;small&gt;</code><code>&lt;s&gt;</code></span></p><p><em>*从菜单项中剥离HTML标记.</em></p></div>"
+        },
+        {
+          "key": "label",
+          "title": "菜单标签 <span>* 可选</span><a href=# class=show-help></a><div class=hidden><h3>菜单标签</h3><p>使用菜单标签为主菜单设置短标题。如果不设置菜单标签，标签将从<em>文件夹名</em>继承<em>. 不像标题，菜单标签应该尽可能短，所以他们很好地融入菜单.</p><h4>HTML 标签</h4><p><em>一些</em> HTML标签在页面标题中被支持：<br><span class=code-inline-block><code>&lt;span&gt;</code><code>&lt;em&gt;</code><code>&lt;i&gt;</code><code>&lt;b&gt;</code><code>&lt;strong&gt;</code><code>&lt;small&gt;</code><code>&lt;img&gt;</code></span></p><p><em>* 超大菜单旋转木马将使用标题而不是标签.</em><br><em>* 标签也可用于文件夹列表.</em></p></div>"
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "title": "描述 <span>* 推荐</span><a href=# class=show-help></a><div class=hidden><h3>页面描述</h3><p>页面描述通常显示在页面标题下面，在页面<code>描述</code>meta标签中, 用于社会共享和搜索列表. 描述不是严格要求的，但我们建议对每个页面进行简短描述.</p><ul><li>你不需要在页面中显示描述，即使你设置了一个.</li><li>描述将显示在谷歌搜索列表，并在社交媒体上共享.</li><li>有没有限制一个页面描述的长度，但缩略规则将保持一个句子（或两个），和最多160个字符.</li></ul><h4>HTML Tags</h4><p><em>* 一些</em> HTML标签在页面标题中被支持：<br><span class=code-inline-block><code>&lt;a&gt;</code><code>&lt;span&gt;</code><code>&lt;em&gt;</code><code>&lt;i&gt;</code><code>&lt;b&gt;</code><code>&lt;strong&gt;</code><code>&lt;small&gt;</code><code>&lt;s&gt;</code><code>&lt;br&gt;</code><code>&lt;mark&gt;</code><code>&lt;img&gt;</code><code>&lt;kbd&gt;</code><code>&lt;code&gt;</code><code>&lt;button&gt;</code></span></p></div>"
+        },
+        {
+          "key": "date",
+          "type": "date",
+          "title": "日期 <span>* 可选</span><a href=# class=show-help></a><div class=hidden><h3>Page Date</h3><p>日期仅用于在页面上下文模块中显示日期的页，例如博客类页. 因此，不需要填写此字段。如果在页面中显示日期，并且没有设置特定日期，则将使用上次更新页时的日期.</p><h4>格式</h4><p>虽然您可以添加日期您喜欢，我们建议标准化格式 <code>YYYY-MM-DD</code>, 年月日使用数字. 日期格式可能显示不同的网站，这取决于您的全局设置 <em>设置 › 设置 › 日期格式</em>.</p></div>"
+        },
+        {
+          "key": "image",
+          "title": "预览图像 <a href=# class=show-help></a><div class=hidden><h3>预览图像</h3><p>为页面设置唯一预览图像。预览图像用于以下:</p><ul><li>在父文件夹列表页中.</li><li>在页面上下文中，如果设置“预览”项.</li><li>在大型菜单转盘和列表.</li><li>在社交媒体上分享<code>og:image</code>.</li></ul><p><em>* 您不需要设置一个预览图像.</em></p><h4>用法</h4><p>从下拉列表中选择一个图像，或者直接转到页面库，然后单击<i class='fa fa-flag'></i>旗子图标设置预览图像. 或者，你可以使用工具›预览预览图像自动将你所有的页面，如果可能的话.</p><p><strong>预览图像从另一个文件夹</strong><br>如果您想从不同文件夹中应用预览图像，则需要添加与内容文件夹相对应的完整文件路径. <em>例如:</em> <code>2.galleries/3.style/van.jpg</code></p><p><strong>默认的预览图像</strong><br>如果将预览图像字段留空，则该页将使用默认预览图像. 默认的预览图像从全局设置页面››默认预览图像定义。.</em></p><p><h4>提示!</h4><p>如果你想添加一个预览图像到一个网页，不包含任何图片，只需上传一个图像文件名 <code>preview.jpg</code>. 此特定文件名隐藏在页库中，仅用于设置预览图像。.</p><p><em>* 文件的名字开始用双__下划线，例如__image.jpg，也隐藏在网页画廊。这是有用的，如果你需要上传一个图像的插件，但不希望它做显示在画廊。.</em></p></div>"
+        },
+        {
+          "key": "body",
+          "title": "体类 <span>[标签]</span><a href=# class=show-help></a><div class=hidden><h3>体类</h3><p>添加特定的CSS体类，这可能会改变页面的样式或布局。您可以添加自定义的类（如果你自定义的CSS定义），或原生X3体类. 例如: <span class=code-inline-block><code>no-header</code><code>custom-class</code></span></p><p><em>* 按顺序键入条目，并在键盘上键入输入/返回或逗号</em></p></div><span class='hidden selectize-items selectize-create'>menu-absolute,menu-absolute-20,menu-absolute-50,no-footer,no-pad,hide-toolbar,menu-absolute,no-header</span>",
+          "htmlClass": "settings_selectize"
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "内容",
+      "htmlClass": "zebra2",
+      "items": [
+      	{
+          "type": "help",
+          "helpvalue": "<h2>内容</h2>在这里添加您的自定义页面内容. <a href=# class=show-help></a><div class=hidden><h3>Content</h3><p>Content is part of the page <code>context</code> module, and is basically where you add your custom page html content. You can leave the content empty if you are creating a gallery-page or a folders-listing page.</p><p>The content field supports <a href=https://help.github.com/articles/markdown-basics/ target=_blank>markdown</a> and html.</p></div>"
+        },
+      	{
+          "key": "content",
+          "htmlClass": "content-editor",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "链接",
+      "htmlClass": "zebra2",
+      "items": [
+      	{
+          "type": "help",
+          "helpvalue": "<h2>链接</h2>使用此页面作为菜单和文件夹列表中的链接. <a href=# class=show-help></a><div class=hidden><h3>Link</h3><p>Apply this setting if you want to use this page as a link. The menu item for the page will link to the url specified, and the page will also redirect to the URL when accessed directly. You can link to pages on the same website or to external links.</p><p><em>* Since a page with a link redirects to another URL, the page itself will never display. However, you may still wish to add certain details that affect how the page displays in the menu.</em></p></div>"
+        },
+      	{
+          "key": "link.url",
+          "title": "链接网址 <span>[留空 = 禁用]</span> <a href=# class=show-help></a><div class=hidden><h3>Link URL</h3><p>Add the URL for the page you want to link to. You can use <em>root-relative</em> urls to other pages in your X3 website, <em>relative</em> urls to child-pages of the current page, or <em>absolute</em> links to external websites.</p><h3>Examples</h3><p><code>/galleries/food/</code><br>Link to another page in your website with a root-relative url. When you include a slash before the relative url, it will look for the url relative to your website root. <em> * When linking to a page within your X3 website, the page will load with AJAX in the same window.</em></p><p><code>child-folder/</code><br>Link to a child-page of the current page by omitting the opening slash.</p><p><code>http://imagevuex.com</code><br>Link to an external website by adding absolute url.</p><p><code>file.pdf</code><br>Link to a file located in the page.</p></div>"
+        },
+        {
+          "type": "section",
+          "items": [
+          	{
+		          "key": "link.target",
+		          "title": "链接的目标 <a href=# class=show-help></a><div class=hidden><h2>链接的目标</h2><p>Use this setting to decide the target for the link.</p><h3>auto</h3><p>Window target will be determined automatically: Relative links will open in same <code>_self</code> window, while absolute links and files will open in a new <code>_blank</code> window.</p><h3>_self</h3><p>Link will always open in the same <code>_self</code> browser window.</p><h3>_blank</h3><p>Link will always open in a new <code>_blank</code> browser window.</p><h3>Popup Window</h3><p>Link will open in a native browser popup window.<br><em>* Most mobile devices will revert to a new tab/window.</em></p><h3>X3 Popup</h3><p>Link will open in the native X3 popup, useful and elegant for images and basic text/html.</p></div>",
+		          "type": "selectfieldset",
+		          "htmlClass": "tab-bg",
+		          "titleMap": {
+		            "popup": "popup window",
+		            "x3_popup": "X3 popup"
+		          },
+		          "items": [
+				        {
+				          "type": "help",
+				          "helpvalue": "<span class=vague>* 当 <u>auto</u> 被选择, 链接目标窗口将自动选择<u>_self</u> 或 <u>_blank</u>.</span>"
+				        },
+				        {
+				          "type": "help",
+				          "helpvalue": "<span class=vague>* 当 <u>_self</u> 被选择, 该链接将始终在同一浏览器窗口打开.</span>"
+				        },
+				        {
+				          "type": "help",
+				          "helpvalue": "<span class=vague>* 当 <u>_blank</u> 被选择, 该链接将始终打开在新的浏览器窗口（通常是一个新的标签）.</span>"
+				        },
+				        {
+				        	"type": "section",
+          				"htmlClass": "overflow-auto",
+          				"items": [
+          					{
+						          "key": "link.width",
+						          "title": "宽度<span>px</span>",
+						          "htmlClass": "inline-group"
+						        },
+						        {
+						          "key": "link.height",
+						          "title": "高度<span>px</span>",
+						          "htmlClass": "inline-group"
+						        },
+						        {
+						          "type": "help",
+						          "helpvalue": "<em>* 宽度和高度将仅限于访问者屏幕尺寸.</em>",
+						          "htmlClass": "clear-node"
+						        }
+          				]
+				        },
+				        {
+				        	"type": "section",
+          				"items": [
+          					{
+						          "key": "link.content",
+						          "inlinetitle": "在X3弹出显示此页的 <strong>内容</strong> <a href=# class=show-help></a><div class=hidden><h2>Display Page Content in X3 Popup</h2><p>When this setting is enabled, the X3 popup ignores the link url, and will instead display this page's html content (from the [content] tab).</p></div>",
+						          "toggleNext": 1
+						        },
+          					{
+						          "key": "link.popup_class",
+						          "title": "自定义 CSS 类 <span>[可选]</span><a href=# class=show-help></a><div class=hidden><h2>X3 Popup Custom CSS Class</h2><p>Add a custom CSS class name to the X3 popup container, allowing you to style the X3 popup with your own CSS styles. Normally, you would add your custom CSS class to settings › custom › custom css.</p></div>"
+						        }
+          				]
+				        }
+				      ]
+		        }
+		      ]
+		    }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "菜单",
+      "htmlClass": "zebra2",
+      "items": [
+      	{
+          "type": "help",
+          "helpvalue": "<h2>菜单</h2>设置以修改此页在主菜单中显示的方式. <a href=# class=show-help></a><div class=hidden><h3>Menu Settings</h3><p>Settings here decide how this page displays in the main menu. </p></div>"
+        },
+        {
+          "key": "menu.hide",
+          "notitle": true,
+          "inlinetitle": "从菜单中隐藏页面<a href=# class=show-help></a><div class=hidden><h3>Hide Page from Menu</h3><p>Use this setting to hide the page from displaying in the main menu.</p></div>"
+        },
+        {
+          "type": "section",
+          "htmlClass": "help-title",
+          "items": [
+          	{
+              "type": "help",
+              "helpvalue": "子页面 <a href=# class=show-help></a><div class=hidden><h3>Child Pages</h3><p>Settings here decide how child-pages (subfolders) of this page display in the main menu.</p></div>"
+            },
+          	{
+		          "key": "menu.hide_children",
+		          "notitle": true,
+		          "inlinetitle": "从菜单中隐藏子页 <a href=# class=show-help></a><div class=hidden><h3>Hide Child Pages</h3><p>Use this setting to hide this page's child pages (subfolders) from displaying in the menu. Useful if you have a category-page, and want to force the visitor to visit the category-page to view- and select child-pages.</p></div>"
+		        },
+		        {
+		          "key": "menu.hide_children_mobile",
+		          "notitle": true,
+		          "inlinetitle": "隐藏手机菜单中的子页面 <a href=# class=show-help></a><div class=hidden><h3>Hide Child Pages from Mobile Menu</h3><p>Use this setting to specifically hide this page's child pages (subfolders) from displaying in the MOBILE slidemenu. The mobile <em>slidemenu</em> displays on mobile- and touch devices, instead of the topbar- and sidebar menu's which display on larger screens. This feature can be useful if you want the mobile visitor to click the category page link to view child pages, instead of accessing them directly from the menu.</p><p><em>* Unlike the topbar-menu, the slidemenu does not allow opening links that have child-pages, because the click-event is reserved for toggling display of child-items. This setting is therefore a compromise alternative to solve this logically.</em></p><p><em>* If you are already using \"Hide Child Pages from menu\", this setting has no further effect.</em></p></div>"
+		        },
+		        {
+		          "key": "menu.reverse",
+		          "notitle": true,
+		          "inlinetitle": "逆向排序 <a href=# class=show-help></a><div class=hidden><h3>Reverse Sort Order</h3><p>Use this setting to reverse the sort order of this page's child pages (subfolders) in the main menu. Normally, it will change from ascending [a-z], to descending [z-a].</p></div>"
+		        },
+		        {
+		          "key": "menu.limit",
+		          "title": "限制 <span>[0 = 没有限制]</span><a href=# class=show-help></a><div class=hidden><h3>Limit Child Pages</h3><p>Use this setting to limit the amount of child pages (subfolders) of this page displaying in the menu. Useful if you have a large amount of child-pages, and want to limit how many are available directly from the menu.</p></div>"
+		        }
+          ]
+        },
+        {
+          "type": "section",
+          "htmlClass": "help-title",
+          "items": [
+          	{
+              "type": "help",
+              "helpvalue": "下拉 <a href=# class=show-help></a><div class=hidden><h3>Dropdown</h3><p>The dropdown option allows top-level pages to include special \"mega menu\" functionality.</p><p><em>What does it mean \"top level-pages\"?</em> With top-level pages, we means folders that are direct descendants of the main content folder, for example <code>content/2.galleries/</code>. Mega-menu functionality only applies to folders on this level, because these are the items that display in the topbar menu where we can add special functionality.</p><p><em>There are four types of mega-menu:</em></p><h4>Normal</h4><p><code>Normal</code> displays the default recursive dropdown menu.</p><h4>List</h4><p><code>List</code> displays a wide dropdown menu, sorting two levels of subfolders neatly into columns. This option requires a 2-level subfolder-structure, for example <code>/toplevel/category1/galleryx/</code> and <code>/toplevel/category2/galleryy/</code></p><p><em>* We plan to implement this for a single-level subfolder structure also at some point ... </em></p><h4>Carousel</h4><p><code>Carousel</code> displays a carousel of items with preview-image in a wide dropdown menu. This option is useful as a teaser for a blog or a category-page with multiple galleries. The carousel will only display direct descendants of the page.</p><h4>Data</h4><p><em>* This feature is mainly used for the contactform menu widget.</em></p><p>This option allows displaying specific data-options specifically related to the page. For now, it is primarily used to display the contactform menu widget, although it can be used for more (coming soon).</p></div>"
+            },
+            {
+              "type": "help",
+              "helpvalue": "<em>* 下拉选项仅适用于顶部条形布局中的顶级文件夹.</em>"
+            },
+            {
+		          "key": "menu.click_toggle",
+		          "notitle": true,
+		          "inlinetitle": "单击切换 <a href=# class=show-help></a><div class=hidden><h3>Click Toggle</h3><p>Enable this setting if you want the dropdown menu for this page to only appear on <code>click</code> instead of mouse <code>hover</code>. <em>* Only applies for the topbar menu.</em></p></div>"
+		        },
+		        {
+		          "key": "menu.nolink",
+		          "notitle": true,
+		          "inlinetitle": "禁用链接 <a href=# class=show-help></a><div class=hidden><h3>Disable Link</h3><p>Enable this setting if you don't want the menu item for this page to be clickable. This can be useful if the page has child-pages, and you don't want the visitor to be able to navigate to the parent page. <em>* Only applies for the topbar menu.</em></p></div>"
+		        },
+            {
+		          "key": "menu.type",
+		          "type": "selectfieldset",
+		          "title": "Select Type",
+		          "htmlClass": "tab-bg",
+		          "items": [
+		          	{
+				          "type": "help",
+				          "helpvalue": "<em>* 没有设置常规下拉菜单.</em>"
+				        },
+				        {
+		              "type": "section",
+		              "htmlClass": "help-title",
+		              "items": [
+		              	{
+		                  "type": "help",
+		                  "helpvalue": "列表 <a href=# class=show-help></a><div class=hidden><h3>List</h3><p>List displays a wide dropdown menu, sorting two levels of subfolders neatly into columns. This option is useful to display two levels of menu-items directly in a single menu canvas. This option requires a 2-level subfolder-structure, for example <code>/THISPAGE/category1/galleryx/</code> and <code>/THISPAGE/category2/galleryy/</code></p></div>"
+		                },
+		                {
+						          "key": "menu.list",
+						          "title": "列数 <span>[留空 = 自动]</span><a href=# class=show-help></a><div class=hidden><h3>List Columns</h3><p>Advanced configuration of the list columns.</p> <h4>Empty (auto)</h4><p><em>* Recommended</em></p><p>When left empty, the list will automatically calculate the amount of columns required to display in the list-menu. If the page contains less than 6 child-pages, it will simply create 1 column for each child-page. If the page contains 6 or more child-pages, items will be stacked into columns tetris-style.</p><h4>Columns (number)</h4><p>If you don't like the automatic columns, you can set the amount of columns for your list mega-menu here. All child-pages will be stacked into the amount of columns specified.</p><h4>Advanced Config</h4><p>Advanced configuration for the subsections in your list mega menu, which can be used to define the order of category-pages in your columns. This can be useful for full custom control of how child-pages are ordered into columns in the list.</p><p><strong>Example</strong><br>In the below example, we are stacking the category-pages into four columns. First column has page1 and page3, second column has page2, page7 and page8 and so on ...<br><code>1,3|2,7,8|4,5|6</code></p></div>"
+						        }
+		              ]
+		            },
+		            {
+		              "type": "section",
+		              "htmlClass": "help-title overflow-auto",
+		              "items": [
+		              	{
+		                  "type": "help",
+		                  "helpvalue": "轮播 <a href=# class=show-help></a><div class=hidden><h3>Carousel Mega Menu</h3><p><code>Carousel</code> displays a carousel of items with preview-image in a wide dropdown menu. This option is useful as a teaser for a blog or a category-page with multiple galleries. <em>* The carousel will only display direct descendants of the page.</em></p></div>"
+		                },
+		                {
+						          "key": "menu.carousel_items",
+						          "htmlClass": "settings_selectize",
+						          "title": "项目 <a href=# class=show-help></a><div class=hidden><h3>Items</h3><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><p>Choose items to display for each page in the carousel-menu. Choose from values <span class=code-inline-block><code>title</code><code>amount</code><code>preview</code><code>description</code><code>label</code><code>date</code></span></p></div><span class='hidden selectize-items'>title,amount,preview,description,label,date</span>"
+						        },
+		              	{
+						          "key": "menu.carousel_amount",
+						          "title": "数目 <span>[1-10]</span><a href=# class=show-help></a><div class=hidden><h3>Carousel Amount</h3><p>The amount of visible child pages in the carousel menu.</p></div>"
+						        },
+		                {
+						          "key": "menu.crop.enabled",
+						          "notitle": true,
+						          "inlinetitle": "修剪图像预览 <a href=# class=show-help></a><div class=hidden><h3>Crop Preview Images</h3><p>Set a crop ratio for preview-images displaying in the carousel menu for a uniform layout.</p><p><em>* Crop should always be enabled for the carousel-menu, unless preview-images already have identical aspect-ratios.</em></p></div>",
+						          "toggleNext": 2
+						        },
+						        {
+						          "key": "menu.crop.crop[0]",
+						          "htmlClass": "inline-group",
+						          "step": 0.1
+						        },
+						        {
+						          "key": "menu.crop.crop[1]",
+						          "htmlClass": "inline-group",
+						          "step": 0.1
+						        }
+		              ]
+		            },
+		            {
+		              "type": "section",
+		              "htmlClass": "help-title",
+		              "items": [
+		              	{
+		                  "type": "help",
+		                  "helpvalue": "日期 <a href=# class=show-help></a><div class=hidden><h3>Data Mega Menu</h3><p><em>* This feature is mainly used for the contactform menu widget.</em></p><p>This option allows displaying specific data-options related to the page. For now, it is primarily used to display the contactform menu widget, although it can be used for more (coming soon).</p></div>"
+		                },
+		              	{
+						          "key": "menu.data_items",
+						          "htmlClass": "settings_selectize",
+						          "title": "项目 <a href=# class=show-help></a><div class=hidden><h3>Items</h3><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><p>Choose items to display for the data-dropdown. Choose from values <span class=code-inline-block><code>contactform</code><code>hr</code><code>icon-buttons</code></span></p></div><span class='hidden selectize-items'>contactform,hr,icon-buttons</span>"
+						        },
+						        {
+						          "key": "menu.width",
+						          "title": "宽度 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Data Width</h3><p>Set the width of the data dropdown menu. Normally, you would set it to a value like <code>320</code> for a typical contact form.</p></div>"
+						        }
+		              ]
+		            }
+		          ]
+		        }
+          ]
+        },
+        {
+          "key": "menu.classes",
+          "htmlClass": "settings_selectize",
+          "title": "菜单类 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Menu CSS Classes</h3><p>This setting allows you to add css classes to this page's menu element. You can add custom css classes, or native x3-classes. Currently, there are only two X3 classes available to be used with the carousel-menu, adding a mouse hover effect.</p></div><span class='hidden selectize-items selectize-create'>x3-hover-icon-asterisk,x3-hover-icon-asterisk-primary</span>"
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "模块",
+      "htmlClass": "zebra2",
+      "items": [
+        {
+          "type": "help",
+          "helpvalue": "<h2>模块</h2>所有页面的一些设置 <a href=# class='text-help'>模块</a>.<div class=hidden><h3>模块</h3><p><em>What are page modules?</em></p><p>Page modules are the three components which make up the page-specific content: <code>context</code>, <code>folders</code> and <code>gallery</code>.</p><h4>context</h4><p>The context module contains all page context, which may include title, description, date, amount and content.</p><h4>folders</h4><p>The folders module will display all subfolders (child-pages) of the current page. If the current page does not have subfolders, the module will not display.</p><p><em>* Folders module will only display on the page if the page contains child-pages (subfolders).</em></p><h4>gallery</h4><p>The gallery module will display all images of the current page. If the current page does not have any images, the module will not display.</p><p><em>* Gallery module will only display if the page contains images.</em></p></div>"
+        },
+        {
+          "key": "layout.items",
+          "htmlClass": "settings_selectize",
+          "title": "页面模块 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Page Modules</h3><p>This setting is used to set the layout- and order of modules in the page</p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><h3>Examples</h3><p>By default, context will display first, followed by page folders, and gallery. Normally, you won't have both folders and images in the same page.<span class=code-line><code>context</code><code>folders</code><code>gallery</code></span></p><p>In some cases, you may wish to switch the order of page modules. In the below example, gallery displays before the page context.<span class=code-line><code>gallery</code><code>context</code><code>folders</code></span></p><p>If you remove the gallery module, it will not display in the page, even if the page has images.<span class=code-line><code>context</code><code>folders</code></span></p></div><span class='hidden selectize-items'>context,folders,gallery</span>"
+        },
+        {
+          "key": "layout.disqus",
+          "notitle": true,
+          "inlinetitle": "包括 Disqus 评论 <a href=# class=show-help></a><div class=hidden><h3>Include Disqus Comments</h3><p><em>* Disqus comments only display if you have added Disqus #ID in your Account settings.</em></p><p>This setting enables <a href=https://disqus.com/ target=_blank>Disqus</a> comments on your pages. Disqus comments display below the last module, at the bottom of page.</p></div>"
+        },
+        {
+          "key": "layout.width",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "titleMap": {
+            "width-default": "default"
+          },
+          "title": "模块宽度 <a href=# class=show-help></a><div class=hidden><h3>Module Width</h3><p>This option sets the layout width for all modules in the page.</p><p><em>* You can override the width of each module specifically from the module's settings. For example, you may want a narrow layout for context, and a wide layout for the gallery.</em></p><h4>Responsive</h4><p>Layout width options are <em>responsive</em>, and are relative to the device screen width. For example on small mobile devices, this option has no effect, because the modules will scale down to device max width anyway. This option mainly affects desktop-sized screens, where the module content may need to be contained inside a functional viewing area.</p><h3>Options</h3><p><code>wide</code> The wide option sets the module to display at 100% screen width. It can be useful for many folders- and gallery layouts (especially slideshow), but should not be used for context.</p><p><code>default</code> This is the default option, where the module is wrapped inside a default <em>1140 px</em> maximum width. This ensures that module content remains within functional viewing areas also on very large screens.</p><p><code>narrow</code> This option sets a relatively narrow layout, which is often suitable for context (text). Text content should be limited by width, because optimal human reading is limited to 50-80 characters per line (like a book).</p><p><code>narrower</code> This option sets a narrower module layout, which is very functional for context (text). This is the default width for the <code>context</code> module.</p><p><code>narrowest</code> This option sets a very narrow module layout, which is suitable for very specific content, for example a contact form.</p></div>"
+        },
+        {
+          "key": "layout.classes",
+          "htmlClass": "settings_selectize",
+          "title": "模块类 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Module Classes</h3><p>Module classes are CSS classes that are applied to <em>all</em> modules in your page (context, folders, gallery). You can add native X3 classes here, or custom CSS classes.</p><p><em>more examples to follow ...</em></p></div><span class='hidden selectize-items selectize-create'>separator</span>"
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "环境",
+      "htmlClass": "zebra2",
+      "items": [
+        {
+          "type": "help",
+          "helpvalue": "<h2>环境</h2>页面上下文模块的设置。 <a href=# class='text-help'>context</a> module.<div class=hidden><h3>Context Module</h3><p><em>What is the page context module?</em></p><p>The context module is part of the page that displays the page details, including <code>title</code>, <code>description</code> and <code>content</code>. The context module will normally display at the top of the page, before any folders- and/or galleries.</p></p>In addition to the three default items, context can also include additional items <span class=code-inline-block><code>label</code><code>amount</code><code>folders_amount</code><code>date</code> and <code>preview</code></p></div>"
+        },
+        {
+          "key": "context.hide",
+          "notitle": true,
+          "inlinetitle": "隐藏上下文模块 <a href=# class=show-help></a><div class=hidden><h3>Hide Context</h3><p>Use this option to force-hide the context module for this page.</p></div>"
+        },
+        {
+          "key": "context.items",
+          "htmlClass": "settings_selectize",
+          "title": "项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Context Items</h3><p>This setting is used to set items of the context module, and in which order they display. The following items are available: <span class=code-inline-block><code>title</code><code>label</code><code>amount</code><code>folders_amount</code><code>date</code><code>preview</code><code>description</code><code>content</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><h3>Items</h3><p><code>title</code> displays the title of the page, normally included first.</p><p><code>label</code> Instead of displaying the page title, you can use the label for shorter titles. This requires populating the label field for pages obviously.</p><p><code>amount</code> displays the amount of images in the page gallery, useful for gallery pages. <em>* Will not display if the page has no images.</em></p><p><code>folders_amount</code> displays the amount of subfolders in the page. <em>* Will not display if the page has no subfolders.</em></p><p><code>date</code> displays the page date, useful for blog-like pages.</em></p><p><code>preview</code> displays the page preview image, useful for blog-like pages when you want to display a related image below the title.</p><p><code>description</code> Displays the page short description, normally included below the title.</p><p><code>content</code> displays the main page content, normally included below title and description. <em>* Content will only display if the page has content.</em></p><h3>Examples</h3><p>Default context items.<span class=code-line><code>title</code><code>description</code><code>content</code></span></p><p>Blog-like page with preview-image and date example.<span class=code-line><code>title</code><code>date</code><code>description</code><code>preview</code><code>content</code></span></p><p>Alternative gallery-page, showing images-amount and excluding description.<span class=code-line><code>title</code><code>amount</code></span></p></div><span class='hidden selectize-items'>title,label,amount,folders_amount,date,preview,description,content</span>"
+        },
+        {
+          "key": "context.width",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "titleMap": {
+            "width-default": "default"
+          },
+          "title": "宽度 <a href=# class=show-help></a><div class=hidden><h3>Context Module Width</h3><p>This option sets the width for the <code>context</code> module. Normally, you will keep this option to the default <code>narrower</code> for context, as it keeps text-content within a functional reading-width.</p><p><strong>NB!</strong> Layout width options are <em>responsive</em>, and are relative to the device screen width. For example on small mobile devices, this option has no effect, because the modules will scale down to device max width anyway. This option mainly affects desktop-sized screens, where the module content may need to be contained inside a functional viewing area.</p><h4>Wide</h4><p>The wide option sets the module to display at 100% screen width. It can be useful for many folders- and gallery layouts (especially slideshow), but should not be used for context.</p><h4>Default</h4><p>This is the default option, where the module is wrapped inside a default <code>1140 px</code> maximum width. This ensures that module content remains within functional viewing areas also on very large screens.</p><h4>Narrow</h4><p>This option sets a relatively narrow layout, which is often suitable for context (text). Text content should be limited by width, because optimal human reading is limited to 50-80 characters per line (like a book).</p><h4>Narrower</h4><p>This option sets a narrower module layout, which is very functional for context (text). This is the default width for the <code>context</code> module.</p><h4>Narrowest</h4><p>This option sets a very narrow module layout, which is suitable for very specific content, for example a contact form.</p></div>"
+        },
+        {
+          "key": "context.classes",
+          "htmlClass": "settings_selectize",
+          "title": "类 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Context Classes</h3><p>Context classes are CSS classes that can be applied specifically to the <code>context</code> module of your page. You can add native X3 classes or custom CSS classes.</p><p><em>* Add classes by typing them in order, and hitting enter/return or comma on keyboard</em></p><h4>Example</h4><p><code>separator</code> add a horizontal rule below the context module, to clearly separate it from the following module.</p><p><em>more examples to follow ...</em></p></div><span class='hidden selectize-items selectize-create'>separator</span>"
+        },
+        {
+          "type": "section",
+          "htmlClass": "overflow-auto",
+          "items": [
+            {
+              "key": "context.crop.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>修剪图像预览</strong> <a href=# class=show-help></a><div class=hidden><h3>Crop Preview Image</h3><p>Set the aspect ratio of the single preview image which may display in the context. If you don't enable crop, you can still use preview image, but it will display at original aspect ratio.</p><h4>Aspect ratio</h4><p>When using crop, you must set an <em>aspect ratio</em> for the crop. By default, we use aspect ratio 2:1, because this is elegant for preview-images in blog-like pages.</p><p><em>Below is an example of a 2:1 ratio crop:</em><div style='padding-bottom:50%; background: #AAA;'></div></p><h4>Important</h4><p>This crop setting <em>only</em> applies if you have included the <code>preview</code> option in context items. However, you can still set default crop aspect ratio, which will apply for pages where you specifically add the preview image.</p></div>",
+              "toggleNext": 2
+            },
+            {
+              "key": "context.crop.crop[0]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            },
+            {
+              "key": "context.crop.crop[1]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "htmlClass": "clear-node",
+          "items": [
+            {
+              "key": "context.caption.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>预览图片的标题</strong> <a href=# class=show-help></a><div class=hidden><h3>Context Preview Image Caption</h3><p>Enable preview image caption, which displays <em>over</em> the preview image. Useful if you want to add some details like page date and amount to overlay the image, instead of stacking in the main context.</p><h4>Important</h4><p>This setting <em>only</em> applies if you have included the <code>preview</code> option in context items.</p></div>",
+              "toggleNext": 3
+            },
+            {
+              "key": "context.caption.items",
+              "title": "标题项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Caption Items</h3><p>Select items to display in the context preview image caption. The following items are available: <span class=code-inline-block><code>title</code><code>label</code><code>amount</code><code>folders_amount</code><code>date</code><code>description</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard.</em></p></div><span class='hidden selectize-items'>title,label,amount,folders_amount,date,description</span>",
+              "htmlClass": "settings_selectize"
+            },
+            {
+              "key": "context.caption.align",
+              "title": "标题对齐 <a href=# class=show-help></a><div class=hidden><h3>Caption Align</h3><p>Select alignment for context preview caption.</p></div>",
+              "titleMap": {
+                "caption-top-left": "top-left",
+                "caption-top": "top",
+                "caption-top-right": "top-right",
+                "caption-bottom-right": "bottom-right",
+                "caption-bottom": "bottom",
+                "caption-bottom-left": "bottom-left"
+              },
+              "type": "radiobuttons",
+              "activeClass": "btn-primary"
+            },
+            {
+              "key": "context.caption.hover",
+              "notitle": true,
+              "inlinetitle": "标题悬停 <a href=# class=show-help></a><div class=hidden><h3>Caption Hover</h3><p>Show context preview caption only on mouse hover.</p></div>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "文件夹",
+      "htmlClass": "zebra2",
+      "items": [
+        {
+          "type": "help",
+          "htmlClass": "template-selector template-folders",
+          "helpvalue": "<h2>文件夹</h2>设置页面 <a href=# class='text-help'>文件夹</a> module. <div class=hidden><h3>Folders Module</h3><p><em>What is the page folders module?</em></p><p>The <strong>folders</strong> module is part of the page that displays child-pages (subfolders) of the current page. This would often be used for an albums-overview or a blog-like page, in both cases listing child pages of the current page.</p><p>The folders module will normally display with preview images from the child folders, by default in a grid layout. However, there are numerous ways to change the layout and style of the folders listing module.</p><p><em>* The folders module will only display in the page if the page has child-pages (subfolders).</em></p></div>"
+        },
+        {
+          "key": "folders.width",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "titleMap": {
+            "width-default": "default"
+          },
+          "title": "模块宽度 <a href=# class=show-help></a><div class=hidden><h3>Folders Module Width</h3><p>This option sets the default width for the <code>folders</code> module.</p><h4>Responsive</h4><p>Layout width options are <em>responsive</em>, and are relative to the device screen width. For example on small mobile devices, this option has no effect, because the modules will scale down to device max width anyway. This option mainly affects desktop-sized screens, where the module content may need to be contained inside a functional viewing area.</p><h4>Options</h4><code>Wide</code><p>The wide option sets the module to display at 100% screen width. This will effectively.</p><code>Default</code><p>This is the default option, where the module is wrapped inside a default <code>1140 px</code> maximum width. This ensures that module content remains within functional viewing areas also on very large screens.</p><code>Narrow</code><p>This option sets a relatively narrow layout, which is often suitable for context (text). Text content should be limited by width, because optimal human reading is limited to 50-80 characters per line (like a book).</p><code>Narrower</code><p>This option sets a narrower module layout.</p><code>Narrowest</code><p>This option sets a very narrow module layout.</p></div>"
+        },
+        {
+          "key": "folders.items",
+          "title": "项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Folders Items</h3><p>This setting is used to set items of the folders module, and in which order they display. The following items are available: <span class=code-inline-block><code>title</code><code>label</code><code>date</code><code>amount</code><code>description</code><code>preview</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><h3>Items</h3><p><code>title</code> displays the title of the folder/page, normally included first.</p><p><code>label</code> Instead of displaying the page title, you can use the label for shorter titles. This requires populating the label field for pages naturally.</p><p><code>date</code> displays the page date.</p><p><code>amount</code> displays the amount of images in the page, if more than 0.</p><p><code>folders_amount</code> displays the amount of folders in the page, if more than 0.</p><p><code>preview</code> displays the page preview image.</p><p><code>preview</code> displays the page preview image.</p><p><code>description</code> displays the page short description.</p><h3>Examples</h3><p>Default folders items.<span class=code-line><code>title</code><code>date</code><code>description</code><code>preview</code></span></p><p>Display the folders preview image in layout without any text. Optionally add title instead using the caption overlay setting. <span class=code-line><code>preview</code></span></p><p>Folders listing without showing any images.<span class=code-line><code>title</code><code>date</code><code>description</code></span></p><p>Display title below preview image, instead of above.<span class=code-line><code>preview</code><code>title</code></span></p></div><span class='hidden selectize-items'>title,label,date,amount,folders_amount,description,preview</span>",
+          "htmlClass": "settings_selectize"
+        },
+        {
+          "type": "section",
+          "htmlClass": "overflow-auto",
+          "items": [
+            {
+              "key": "folders.crop.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>修剪图像预览</strong> <a href=# class=show-help></a><div class=hidden><h3>Crop Folders Preview Images</h3><p>This setting allows you to crop the preview images which display in the folders module. The advantage of cropped images, is that it provides a consistent layout because all images listed are the same size. If you don't enable crop, you can still use preview images, but they will display at original aspect ratios.</p><p><em>* It is strongly recommended to use crop for the <code>grid</code> layout</em></p><h3>Aspect Ratio</h3><p>Use the aspect ratio to decide the crop ratio of the image. For example 1:1 will display a symmetrical square image, 2:1 will display a wide image, while 1:2 will create a tall image. It all depends on your images, and the layout you are using.</p></div>",
+              "toggleNext": 2
+            },
+            {
+              "key": "folders.crop.crop[0]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            },
+            {
+              "key": "folders.crop.crop[1]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            }
+          ]
+        },
+        {
+          "key": "folders.layout",
+          "type": "selectfieldset",
+          "htmlClass": "tab-bg clear-node",
+          "title": "选择布局 <a href=# class=show-help></a><div class=hidden><h3>Folders Layout</h3><p>Select a layout for the folders page module.</p><h4>Grid</h4><p>Use the grid method to create robust grid layouts, which respond nicely to different screen widths.</p><h4>Vertical</h4><p>Simply list images vertically in a blog-like style. Functional, responsive and works nicely on all devices.</p><h4>Justified</h4><p>Use the justified method to create neat layouts with images of different aspects. Justified will scale images within rows to allow an elegant layout which the fills space available.</p><h4>Columns</h4><p>Use the columns method to create a vertical masonry-style layout which emphasizes portrait aspect images. Columns will scale images within columns to allow an elegant layout which fills space available.</p><h4>Carousel</h4><p>The carousel method displays multiple items in a horizontal carousel layout. The carousel is useful for teaser pages.</p></div>",
+          "items": [
+	        {
+	          "type": "section",
+	          "items": [
+	            {
+	              "type": "help",
+	              "htmlClass": "section-title",
+	              "helpvalue": "网格布局 <a href=# class=show-help></a><div class=hidden><h3>Grid Layout</h3><p>Use the grid method to create a robust grid layout, which responds to different screen widths. Because it is a strict grid, unless your images are all the same aspect, you should use the crop setting to achieve a uniform layout.</p></div>"
+	            },
+	            {
+	              "key": "folders.grid.columns",
+	              "title": "列 <span>[large-, medium-, small- screen]</span><a href=# class=show-help></a><div class=hidden><h3>Grid Columns</h3><p><em>* This setting only applies if</em> <code>use width</code> <em>is disabled.</em></p><p>Create a grid layout by defining the amount of columns available in the grid on large-, medium- and small screens respectively.</p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><h3>Examples</h3><p>The default grid displays 3 columns on large screens, 2 columns on small screens and a single column on small (mobile) screens.<span class=code-line><code>3</code><code>2</code><code>1</code></span></p><p>Add more columns to create a thumbnails-like layout. In this example, we have 6 columns on large screens, 3 columns on medium screens, and 1 column on small screens. <em>* We recommend a single column on small screens (mobile devices), because it simply works best.</em><span class=code-line><code>6</code><code>3</code><code>1</code></span></p><p>By omitting values for medium- and small screens, you can set an amount of columns that apply for <em>all</em> screen sizes. Keep in mind, when doing such, your grid will scale down to a large degree on small devices.<span class=code-line><code>3</code></span></p></div>"
+	            },
+	            {
+	              "key": "folders.grid.use_width",
+	              "notitle": true,
+	              "inlinetitle": "使用宽度 <a href=# class=show-help></a><div class=hidden><h3>Grid Use Width</h3><p>There are two ways of using the grid layout.</p><h4>Use Width Disabled</h4><p>By default, use-width is disabled, and the grid-layout relies on the <code>columns</code> setting to define a columns layout.<h4>Use Width Enabled</h4><p>If use-width is enabled, grid columns will attempt to occupy the width defined in the <code>column width</code> setting. The amount of columns you get, will therefore depend on the target-width, and the width of the parent container.</p></div>",
+	              "toggleNext": 1
+	            },
+	            {
+	              "key": "folders.grid.column_width",
+	              "title": "列宽 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Column Width</h3><p><em>* This setting only applies if <code>use width</code> is enabled.</em></p><p>Instead of defining the amount of columns, set a target-width for columns. The amount of columns created, will depend on the target-width and the available horizontal space. <em>*&nbsp;When using Column-width, the layout is responsive by nature, because less columns at any specific width will fit in smaller screens.</em></p></div>",
+	              "step": 10
+	            },
+	            {
+	              "key": "folders.grid.space",
+	              "title": "网格空间<span>[px, -1 为自动]</span> <a href=# class=show-help></a><div class=hidden><h3>Grid Space</h3><p>The amount of space in <code>px</code> between grid items.</p></div>"
+	            }
+	          ]
+	        },
+	        {
+	          "type": "section",
+	          "items": [
+	            {
+	              "type": "help",
+	              "htmlClass": "section-title",
+	              "helpvalue": "竖向布局 <a href=# class=show-help></a><div class=hidden><h3>Vertical Layout</h3><p>The vertical method simply creates a layout where images are stacked vertically and respond to screen width. This layout is simple but effective for scrolling through items both on desktop- and small touchscreen devices. It is recommended to use the vertical layout with the <code>narrow</code> module width.</p></div>"
+	            },
+	            {
+	              "key": "folders.vertical.scrollnav",
+	              "notitle": true,
+	              "inlinetitle": "滚动导航 <a href=# class=show-help></a><div class=hidden><h3>Scrollnav</h3><p>Adds controls on the right side of the screen to elegantly scroll through images with mouse click or keyboard click.</p></div>"
+	            },
+	            {
+	              "key": "folders.vertical.horizontal_rule",
+	              "notitle": true,
+	              "inlinetitle": "横向规则 <a href=# class=show-help></a><div class=hidden><h3>Horizontal Rule</h3><p>Adds a subtle 1px horizontal rule between each folder item. An elegant way to clearly separate items.</p></div>"
+	            }
+	          ]
+	        },
+	        {
+	          "type": "section",
+	          "items": [
+	            {
+	              "type": "help",
+	              "htmlClass": "section-title",
+	              "helpvalue": "两端对齐布局 <a href=# class=show-help></a><div class=hidden><h3>Justified Layout Settings</h3><p>Use the justified method to create neat layouts with images of different aspects. Justified layout will scale images to fit within specified row target height, allowing elegant layouts that fill the available space.</p><p><em>*&nbsp;Justified layout is not compatible with meta-data (title, description etc), unless you use captions-overlay or tooltip.</em></p><p><em>*&nbsp;The justified layout is responsive by nature, since images will fill each row at whatever width is available.</em></p></div>"
+	            },
+	            {
+	              "key": "folders.justified.row_height",
+	              "title": "行高 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Target Row Height</h3><p>Set a target row-height, where images will be scaled within. The larger the target-height, the larger the images are, but fewer images will fit inside each row.</p><p><em>*&nbsp;The justified layout will calculate height of each row based on target-height and the amount- and aspect of images inside. Sometimes, you may get an orphan-image on a separate row at the bottom.</em></p></div>",
+	              "step": 10
+	            },
+	            {
+	              "key": "folders.justified.space",
+	              "title": "空间 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Space</h3><p>Space in <code>px</code> between items in the justified layout.</p></div>"
+	            },
+	            {
+	              "key": "folders.justified.small_disabled",
+	              "inlinetitle": "在小型移动设备上禁用 <a href=# class=show-help></a><div class=hidden><h3>Disable justified grid on small mobile devices</h3><p>Since the justified grid often stacks images vertically on small mobile devices anyway, it may be unnecessary to process them in a justified layout. Furthermore, it is often easier for visitors on small mobile devices to simply scroll through images stacked vertically.</p><p><em>* Images will stack vertically on small mobile devices.<br>* Justified layout will still work on tablets 700px and up.<br>* This setting may be beneficial for galleries with several hundred images.</em></p></div>"
+	            }
+	          ]
+	        },
+	        {
+	          "type": "section",
+	          "items": [
+	            {
+	              "type": "help",
+	              "htmlClass": "section-title",
+	              "helpvalue": "列布局 <a href=# class=show-help></a><div class=hidden><h3>Columns Layout</h3><p>Use the columns method to create a vertical masonry-style layout which emphasizes portrait aspect images. This layout will scale images within the columns to allow an elegant layout which fills the space available.</p></div>"
+	            },
+	            {
+	              "key": "folders.columns.use_width",
+	              "notitle": true,
+	              "inlinetitle": "使用宽度 <span>[recommended]</span><a href=# class=show-help></a><div class=hidden><h3>Use Width</h3><p>This setting allow you to set a target-width for columns in the columns layout. The value applied here decides the amount of columns that are able to fit into the width of the parent container. <em>* We strongly recommend using this setting for the columns layout, because it allows a responsive layout with less columns on smaller devices.</em></p></div>",
+	              "toggleNext": true
+	            },
+	            {
+	              "key": "folders.columns.column_width",
+	              "title": "列宽 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Column Width</h3><p><em>* This setting only applies if</em> <code>use width</code> <em> is enabled.</em></p><p>Set a target-width for columns in the columns layout. The value applied here decides the amount of columns that are able to fit into the available width of the parent container.</p></div>",
+	              "step": 10
+	            },
+	            {
+	              "key": "folders.columns.columns",
+	              "title": "列 <a href=# class=show-help></a><div class=hidden><h3>Columns</h3><p><em>* This setting only applies if</em> <code>use width</code> <em> is disabled.</em></p><p>Set the amount of columns to stack items within.</p></div>"
+	            },
+	            {
+	              "key": "folders.columns.space",
+	              "title": "空间<span>[px, -1 for auto]</span><a href=# class=show-help></a><div class=hidden><h3>Space</h3><p>Space in <code>px</code> between items in the columns layout.</p></div>"
+	            }
+	          ]
+	        },
+	        {
+	          "type": "section",
+	          "items": [
+	            {
+	              "type": "help",
+	              "htmlClass": "section-title",
+	              "helpvalue": "轮播布局 <a href=# class=show-help></a><div class=hidden><h3>Carousel Layout</h3><p>The carousel method displays multiple items in a carousel-like layout, supporting swipe, keyboard and video.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.amount",
+	              "title": "数量 <a href=# class=show-help></a><div class=hidden><h3>Carousel Amount</h3><p>Set the amount of carousel items to display simultaneously on screen.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.use_height",
+	              "notitle": true,
+	              "inlinetitle": "使用高度 <a href=# class=show-help></a><div class=hidden><h3>Carousel Use Height</h3><p>This setting attempts to resize image based on height, so that they fit into the carousel without having to apply crop to the images for uniform sizes. <em>* This setting is experimental. We recommend leaving disabled, and using carousel-amount with an image crop.</em></p></div>",
+	              "toggleNext": 1
+	            },
+	            {
+	              "key": "folders.carousel.target_height",
+	              "title": "目标高度 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Carousel Target Height</h3><p><em>* This setting only applies when</em> <code>use height</code> <em>is enabled</em>.</p><p>Set a target height for images in the carousel.</p></div>",
+	              "step": 10
+	            },
+	            {
+	              "key": "folders.carousel.margin",
+	              "title": "空间 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Carousel Space</h3><p>Space in <code>px</code> between items in the carousel.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.interval",
+	              "title": "自动播放间隔 <span>[几秒, 0 = 禁用自动播放]</span> <a href=# class=show-help></a><div class=hidden><h3>Carousel Interval</h3><p>Set the carousel to autoplay, so it slides to next items after a specified interval (ms). The Interval value should be in milliseconds, so 3000 means 3 second intervals.</p><p><em>Set value to 0 to disable autoplay.</em></p></div>",
+	              "step": 1000
+	            },
+	            {
+	              "key": "folders.carousel.show_timer",
+	              "notitle": true,
+	              "inlinetitle": "显示计时器 <a href=# class=show-help></a><div class=hidden><h3>Carousel Show Timer</h3><p>When in autoplay mode, shows an animated visual element representing the interval.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.lazy",
+	              "notitle": true,
+	              "inlinetitle": "懒加载 <a href=# class=show-help></a><div class=hidden><h3>Carousel Interval</h3><p>Lazy-load images as they come into view, instead of preloading all images on page-load. This setting should be enable if you have dozens of images in your carousel. If there are only a few, you should perhaps disable for better loading performance.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.background",
+	              "notitle": true,
+	              "inline": true,
+	              "inlinetitle": "背景 <a href=# class=show-help></a><div class=hidden><h3>Carousel Background</h3><p>Adds a subtle background behind the carousel, which helps it stand out. Useful if you are using large space between items.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.nav",
+	              "inline": true,
+	              "notitle": true,
+	              "inlinetitle": "显示导航 <a href=# class=show-help></a><div class=hidden><h3>Carousel Show Nav</h3><p>Show the carousel navigation items: arrows and dots. You would only disable this option if you have enabled autoplay.</p></div>"
+	            },
+	            {
+	              "key": "folders.carousel.tabs",
+	              "inlinetitle": "显示标签 <a href=# class=show-help></a><div class=hidden><h3>Show Tabs</h3><p>When enabled, tab buttons will be created for each page in the carousel <a href=https://demo.flamepix.com/examples/folders/carousel-tabs/ target=_blank>[see demo]</a>. Although carousel with tabs has several limitations, it can be very useful to create an interactive timeline-effect for groups of pages.</p><h4>Carousel Tabs Info</h4><ul><li>When tabs are enabled, carousel <code>amount</code> will always be set to 1, since tabs only support a single active item visible on screen.</li><li>Tabs should normally be used with the <code>Split View</code> folders setting as in the <a href=https://demo.flamepix.com/examples/folders/carousel-tabs/ target=_blank>demo</a>.</li><li>Tabs are populated by page <em>label</em> or page <em>slug</em> (folder name) if label is not set. Titles are not used because they are often too long and will display in the carousel anyway. Tab titles should be short and accurate.</li><li>Unless all your folder preview images are all the same aspect, you should use the <code>Crop Preview Images</code> setting (for example 3:2) to achieve a uniform carousel layout. If images are at different size, the carousel will scale to the size of the tallest image in the carousel, which will leave a lot of empty space.</li></ul></div>",
+	              "toggleNext": 1
+	            },
+	            {
+	              "key": "folders.carousel.tabs_position",
+	              "type": "radiobuttons",
+	              "activeClass": "btn-primary"
+	            },
+	            {
+	              "key": "folders.carousel.loop",
+	              "inline": true,
+	              "notitle": true,
+	              "inlinetitle": "循环 <a href=# class=show-help></a><div class=hidden><h3>Carousel Loop</h3><p>Stich the carousel at end-points, so that it seemingly loops.</p></div>"
+	            }
+	          ]
+	        }
+          ]
+		    },
+        {
+          "key": "folders.sort",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "titleMap": {
+            "asc": "Ascending",
+            "desc": "Descending",
+            "shuffle": "Shuffle"
+          },
+          "title": "排序顺序 <a href=# class=show-help></a><div class=hidden><h3>Folders Sorting Order</h3><p>Set the sorting order for page folders listing. By default, pages are listed in ascending order by number 1 - 9 or name A - Z.</p></div>"
+        },
+        {
+          "key": "folders.title_size",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "title": "标题大小 <a href=# class=show-help></a><div class=hidden><h3>Title Size</h3><p>Set a relative size for titles in the page folders module. Some layouts, like <code>vertical</code>, are suitable for large titles, while other layouts like <code>grid</code> may require smaller titles.</p></div>"
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+              "key": "folders.split.enabled",
+              "inlinetitle": true,
+              "title": "<strong>拆分视图</strong> <a href=# class=show-help></a><div class=hidden><h3>Split View</h3><p>The split view setting allows you to split the folders listing into two columns, with preview-image on one side, and folder details (title, description etc) on the other. This setting works best with the <code>vertical</code> layout, but in a few rare cases, you could also use it with a 2-column grid.</p><p><em>Below is an example of a split view with the vertical layout.</em></p><div style='overflow:auto;'><div style='width:50%; padding: .5em; float:left;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:50%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div><div style='width:50%; padding: .5em; float:left;clear:both;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:50%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div></div><h3>Split View Ratio</h3><p>The split view is based on a 12-column grid, and default ratio <strong>6</strong> means the columns will split into two equally-sized columns. If you increase the ratio, the left column will occupy more space. The ratio can be set from <strong>1 to 12</strong>, to indicate how many columns the left side should occupy. Normally, you should be considering values between 4 and 8 for any functional layout.</p><p><em>* Example of ratio to set 4, which means left side will occupy 33.3% of the available width</em></p><div style='overflow:auto;'><div style='width:33.3%; padding: .5em; float:left;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:66.6%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div><div style='width:33.3%; padding: .5em; float:left;clear:both;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:66.6%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div></div><h3>Invert Split</h3><p>By default, the split is inverted so that preview-image is on the left, and text is on the right. If you disable invert, the text will be on the left, and image on the right.</p></div>",
+              "toggleNext": 2
+            },
+            {
+              "key": "folders.split.ratio",
+              "title": "拆分比率"
+            },
+            {
+              "key": "folders.split.invert",
+              "notitle": true,
+              "inlinetitle": "反向拆分"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "htmlClass": "clear-node",
+          "items": [
+            {
+              "key": "folders.caption.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>预览图片的标题</strong> <a href=# class=show-help></a><div class=hidden><h3>Folders Preview Image Caption</h3><p>Enable preview image caption, which displays <em>over</em> the folders preview image. Useful for some layouts if you want to add details <strong>over</strong> the image, instead of above or below the image.</p><p>* This setting is particularly useful when using either the <code>justified</code> or <code>columns</code> layout, because having details overlay the image will not disrupt the layout.</p></div>",
+              "toggleNext": 3
+            },
+            {
+              "key": "folders.caption.items",
+              "title": "标题项目<span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Caption Items</h3><p>Select default items to display in the folders preview image captions. The following items are available: <span class=code-inline-block><code>title</code><code>label</code><code>amount</code><code>folders_amount</code><code>date</code><code>description</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard.</em></p></div><span class='hidden selectize-items'>title,label,amount,folders_amount,date,description</span>",
+          		"htmlClass": "settings_selectize"
+            },
+            {
+              "key": "folders.caption.align",
+              "title": "标题对齐 <a href=# class=show-help></a><div class=hidden><h3>Caption Align</h3><p>Select alignment for folders preview caption.</p></div>",
+              "titleMap": {
+                "caption-top-left": "top-left",
+                "caption-top": "top",
+                "caption-top-right": "top-right",
+                "caption-bottom-right": "bottom-right",
+                "caption-bottom": "bottom",
+                "caption-bottom-left": "bottom-left"
+              },
+              "type": "radiobuttons",
+              "activeClass": "btn-primary"
+            },
+            {
+              "key": "folders.caption.hover",
+              "notitle": true,
+              "inlinetitle": "字幕悬停 <a href=# class=show-help></a><div class=hidden><h3>Caption Hover</h3><p>Show folders preview caption only on mouse hover.</p></div>"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+              "key": "folders.tooltip.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>工具提示</strong> <a href=# class=show-help></a><div class=hidden><h3>Folders Tooltip</h3><p>Display a tooltip on preview mouse hover, which reveals additional details from the folders-item. This feature is useful for tight layouts with small preview images, where you want to display additional information about the page folder on mouse hover.</p></div>",
+              "toggleNext": 1
+            },
+            {
+              "key": "folders.tooltip.items",
+              "title": "项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Folders Tooltip Items</h3><p>The following items are available for the folders module tooltip: <span class=code-inline-block><code>title</code><code>label</code><code>amount</code><code>folders_amount</code><code>date</code><code>description</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard.</em></p></div><span class='hidden selectize-items'>title,label,amount,folders_amount,date,description</span>",
+          		"htmlClass": "settings_selectize"
+            }
+          ]
+        },
+        {
+          "key": "folders.classes",
+          "title": "CSS 类 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Folders CSS Classes</h3><p>Folders classes are CSS classes that can be applied specifically to the <code>folders</code> module of your page. You can add native X3 classes or custom CSS classes.</p><p><em>* Add classes by typing them in order, and hitting enter/return or comma on keyboard</em></p><h4>Example</h4><p><code>text-center</code> Center-aligns text inside each folders items.</p><p><em>more examples to follow ...</em></p></div><span class='hidden selectize-items selectize-create'>frame,text-center,separator,hover,card</span>",
+          "htmlClass": "settings_selectize"
+        },
+        {
+          "key": "folders.assets",
+          "title": "文件夹资源 <a href=# class=show-help></a><div class=hidden><h3>Folders Assets</h3><p><em>* Use this setting to display child-pages (subfolders) from another folder.</em></p><p>By default, a page will display it's own child-pages (subfolders). By selecting an <em>assets</em> folder, you can set the page to display child-pages from another folder instead.</p><h4>Usage Examples</h4><p><em>How might this be useful?</em></p><p><code>Example 1</code> You might have a home page where you want to display latest galleries- or blog-posts from another folder. Simply point assets to the page that contains the folders, and create the folders-layout you want.</p><p><code>Example 2</code> You want to create a page that displays the same child-pages as another page, but with a different layout. Simply refer the original folder in assets, and create an optional layout.</p></div>"
+        },
+        {
+          "key": "folders.limit",
+          "title": "限制数量<span>[0 = 没有限制]</span> <a href=# class=show-help></a><div class=hidden><h3>Folders Display Limit</h3><p>Use this setting to limit the amount of child folders displaying in the page. You may for example wish to display only the last three child folders for a blog-page or a specific albums-page.</p></div>"
+        },
+        {
+          "key": "folders.hide",
+          "notitle": true,
+          "inlinetitle": "隐藏文件夹模块 <a href=# class=show-help></a><div class=hidden><h3>Hide Folders Module</h3><p>Use this setting to force-hide the folders module from displaying in the page. <em> * Folders module will in any case only display if the page has child-pages (subfolders).</em></p></div>"
+        }
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "画廊",
+      "htmlClass": "zebra2",
+      "items": [
+        {
+          "type": "help",
+          "htmlClass": "template-selector template-gallery",
+          "helpvalue": "<h2>画廊</h2>页面画廊模块的设置. <div class=hidden><h3>Gallery Module</h3><p><em>What is the page gallery module?</em></p><p>The <strong>gallery</strong> module is part of the page layout that displays the page's images. There are many layout-options and styles to choose from for the gallery module.</p><p><em>* Settings here are inherited from global settings › page › gallery.</em></p><p><em>* The gallery module will only display in the page if the page contains images.</em></p></div>"
+        },
+        {
+          "key": "gallery.width",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "titleMap": {
+            "width-default": "default"
+          },
+          "title": "模块宽度 <a href=# class=show-help></a><div class=hidden><h3>Gallery Module Width</h3><p>This option sets the width for the <code>gallery</code> module. We generally recommend 'wide' for slideshow, 'narrow' for vertical layout, while grid-, columns- and justified layouts work well in both wide and default.</p><h4>Responsive</h4><p>Layout width options are <em>responsive</em>, and are relative to the device screen width. For example on small mobile devices, this option has no effect, because the modules will scale down to device max width anyway. This option mainly affects desktop-sized screens, where the module content may need to be contained inside a functional viewing area.</p><h4>Options</h4><p><code>Wide</code> The wide option sets the module to display at 100% screen width. This will effectively.</p><p><code>Default</code> This is the default option, where the module is wrapped inside a default 1140 px maximum width. This ensures that module content remains relatively wide, but within a functional viewing areas also on very large screens.</p><p><code>Narrow</code> This option sets a relatively narrow layout, which is often suitable for context (text). Text content should be limited by width, because optimal human reading is limited to 50-80 characters per line (like a book).</p><p><code>Narrower</code> This option sets a narrower module layout.</p><p><code>Narrowest</code> This option sets a very narrow module layout.</p></div>"
+        },
+        {
+          "key": "gallery.items",
+          "htmlClass": "settings_selectize",
+          "title": "项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Gallery Items</h3><p>This setting is used to set items for images in the gallery module, and in which order the items display. The following items are available: <span class=code-inline-block><code>title</code><code>date</code><code>description</code><code>preview</code></span>.</p><p>As a general guideline, you would only use <em>preview</em> item for slideshow-, columns- and justified layouts, and instead use the <em>caption</em> setting if you need to display title and/or description. The vertical- and grid- layouts are suitable if you want to display title and/or description above or below the preview image.</p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard</em></p><h4>Items</h4><p><code>title</code> displays the title for each image.</p><p><code>date</code> displays the image date.</p><p><code>preview</code> displays a preview of the actual image.</p><p><code>description</code> displays the image description, if it exists.</p><h4>Examples</h4><p>Default gallery items, shows only a preview for each image.<span class=code-line><code>preview</code></span></p><p>You can add image title and description by adding these items before the preview. <span class=code-line><code>title</code><code>description</code><code>preview</code></span></p><p>Display date below the preview image.<span class=code-line><code>preview</code><code>date</code></span></p><p><em>* Items do not apply for the slideshow layout.</em></p></div><span class='hidden selectize-items'>title,date,description,preview</span>"
+        },
+        {
+          "type": "section",
+          "htmlClass": "overflow-auto",
+          "items": [
+            {
+              "key": "gallery.crop.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>修剪图像</strong> <a href=# class=show-help></a><div class=hidden><h3>Crop Images</h3><p>This setting allows you to crop images which display in the gallery module. The advantage of cropped images, is that it offers a uniform layout because all images will be the same size. Normally, you would want to use crop for the <code>grid</code> layout, and the <code>carousel</code> layout.</p><p><em>* When using the </em><code>justified</code><em> or </em><code>columns</code><em> layout, image crop will be ignored. These layouts are specifically for images of different aspects, and this allows you to keep crop as a default for other layouts.</em></p><p><em>* When images are clicked and opened in the popup slideshow module, they will nautrally be displayed in original non-cropped aspect.</em></p><h3>Aspect Ratio</h3><p>Use the aspect ratio to decide the crop ratio of the image. For example 1:1 will display a symmetrical square image, 2:1 will display a wide image, while 1:2 will create a tall image. It all depends on your images, and the layout you are using.</p></div>",
+              "toggleNext": 2
+            },
+            {
+              "key": "gallery.crop.crop[0]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            },
+            {
+              "key": "gallery.crop.crop[1]",
+              "htmlClass": "inline-group",
+              "step": 0.1
+            }
+          ]
+        },
+        {
+          "key": "gallery.layout",
+          "htmlClass": "tab-bg clear-node",
+          "title": "选择布局 <a href=# class=show-help></a><div class=hidden><h3>Gallery Layout</h3><p>Select a layout for the page gallery module.</p><h4>Grid</h4><p>Use the grid method to create robust grid layouts, which respond nicely to different screen widths.</p><h4>Vertical</h4><p>Simply list images vertically in a blog-like style. Functional, responsive and works nicely on all devices.</p><h4>Justified</h4><p>Use the justified method to create neat layouts with images of different aspects. Justified will scale images within rows to allow an elegant layout which the fills space available.</p><h4>Columns</h4><p>Use the columns method to create a vertical masonry-style layout which emphasizes portrait aspect images. Columns will scale images within columns to allow an elegant layout which fills space available.</p><h4>Carousel</h4><p>The carousel method displays multiple items in a horizontal carousel layout. The carousel is useful for teaser pages.</p><h4>Slideshow</h4><p>The slideshow is a powerful gallery layout that supports swipe, keyboard nav, thumbnails, autoplay, fullscreen, video and more. The slideshow method comes with comprehensive settings to account for a variety of layout combinations.</p></div>",
+          "type": "selectfieldset",
+          "items": [
+		        {
+		          "type": "fieldset",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "网格布局 <a href=# class=show-help></a><div class=hidden><h3>Grid Layout</h3><p>Use the grid method to create robust grid layouts, which can respond to different screen widths. Because it is a strict grid, unless your images are all the same aspect, you should use the crop setting to achieve a uniform layout.</p></div>"
+		            },
+		            {
+		              "key": "gallery.grid.columns",
+		              "title": "列 <span>[large-, medium-, small- screen]</span><a href=# class=show-help></a><div class=hidden><h3>Grid Columns</h3><p><em>* This setting only applies if</em> <code>use width</code> <em>is disabled.</em></p><p>Create a grid layout by defining the amount of columns available in the grid on large-, medium- and small screens respectively.</p><h3>Examples</h3><p>The default grid displays 3 columns on large screens, 2 columns on small screens and a single column on small (mobile) screens.<span class=code-line><code>3</code><code>2</code><code>1</code></span></p><p>Add more columns to create a thumbnails-like layout. In this example, we have 6 columns on large screens, 3 columns on medium screens, and 1 column on small screens. <em>* We recommend a single column on small screens (mobile devices), because it simply works best.</em><span class=code-line><code>6</code><code>3</code><code>1</code></span></p><p>By omitting values for medium- and small screens, you can set an amount of columns that apply for <em>all</em> screen sizes. Keep in mind, when doing such, your grid columns will scale down to a large degree on small devices.<span class=code-line><code>3</code></span></p></div>"
+		            },
+		            {
+		              "key": "gallery.grid.use_width",
+		              "notitle": true,
+		              "inlinetitle": "使用宽度 <a href=# class=show-help></a><div class=hidden><h3>Grid Use Width</h3><p>There are two ways of using the grid layout.</p><h4>Use Width Disabled</h4><p>By default, use-width is disabled, and the grid-layout relies on the <code>columns</code> setting to define a columns layout.<h4>Use Width Enabled</h4><p>If use-width is enabled, grid columns will attempt to occupy the width defined in the <code>column width</code> setting. The amount of columns you get, will therefore depend on the target-width, and the width of the parent container.</p></div>",
+		              "toggleNext": 1
+		            },
+		            {
+		              "key": "gallery.grid.column_width",
+		              "title": "列宽 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Column Width</h3><p><em>* This setting only applies if</em> <code>use width</code> <em>is enabled.</em></p><p>Instead of defining the amount of columns, set a target-width for columns. The amount of columns created, will depend on the target-width and the available horizontal space. <em>*&nbsp;When using Column-width, the layout is responsive by nature, because less columns at any specific width will fit in smaller screens.</em></p></div>",
+		              "step": 10
+		            },
+		            {
+		              "key": "gallery.grid.space",
+		              "title": "网格空间<span>[px, -1 为自动]</span> <a href=# class=show-help></a><div class=hidden><h3>Grid Space</h3><p>The amount of space in <code>px</code> between grid items.</p></div>"
+		            }
+		          ]
+		        },
+		        {
+		          "type": "section",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "竖向布局 <a href=# class=show-help></a><div class=hidden><h3>Vertical Layout</h3><p>The vertical method simply creates a layout where images are stacked vertically and respond to screen width. This layout is simple but effective for scrolling through items both on desktop- and small touchscreen devices. It is recommended to use the vertical layout with the <code>narrow</code> module width.</p></div>"
+		            },
+		            {
+		              "key": "gallery.vertical.scrollnav",
+		              "notitle": true,
+		              "inlinetitle": "滚动导航 <a href=# class=show-help></a><div class=hidden><h3>Scrollnav</h3><p>Adds controls on the right side of the screen to elegantly scroll through images with mouse click or keyboard click.</p></div>"
+		            },
+		            {
+		              "key": "gallery.vertical.horizontal_rule",
+		              "notitle": true,
+		              "inlinetitle": "横向规则 <a href=# class=show-help></a><div class=hidden><h3>Horizontal Rule</h3><p>Adds a subtle 1px horizontal rule between each image in the vertical layout. An elegant way to clearly separate items. <em>* The horizontal rule is hidden on small screen devices.</em></p></div>"
+		            }
+		          ]
+		        },
+		        {
+		          "type": "section",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "两端对齐布局 <a href=# class=show-help></a><div class=hidden><h3>Justified Layout Settings</h3><p>Use the justified method to create neat layouts with images of different aspects. Justified layout will scale images to fit within specified row target height, allowing elegant layouts that fill the available space. Justified layout works for both GALLERY and FOLDERS modules.</p><p><em>*&nbsp;Justified layout is not compatible with meta-data (title, description etc), unless you use captions-overlay or tooltip.</em></p><p><em>*&nbsp;The justified layout is responsive by nature, since images will fill each row at whatever width is available.</em></p></div>"
+		            },
+		            {
+		              "key": "gallery.justified.row_height",
+		              "title": "行高 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Target Row Height</h3><p>Set a target row-height, where images will be scaled within. The larger the target-height, the larger the images are, but fewer images will fit inside each row.</p><p><em>*&nbsp;The justified layout will calculate height of each row based on target-height and the amount- and aspect of images inside. Sometimes, you may get an orphan-image on a separate row at the bottom.</em></p></div>",
+		              "step": 10
+		            },
+		            {
+		              "key": "gallery.justified.space",
+		              "title": "空间 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Space</h3><p>Space in <code>px</code> between items in the justified layout.</p></div>"
+		            },
+		            {
+		              "key": "gallery.justified.small_disabled",
+		              "inlinetitle": "在小型移动设备上禁用 <a href=# class=show-help></a><div class=hidden><h3>Disable justified grid on small mobile devices</h3><p>Since the justified grid often stacks images vertically on small mobile devices anyway, it may be unnecessary to process them in a justified layout. Furthermore, it is often easier for visitors on small mobile devices to simply scroll through images stacked vertically.</p><p><em>* Images will stack vertically on small mobile devices.<br>* Justified layout will still work on tablets 700px and up.<br>* This setting may be beneficial for galleries with several hundred images.</em></p></div>"
+		            }
+		          ]
+		        },
+		        {
+		          "type": "section",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "列布局 <a href=# class=show-help></a><div class=hidden><h3>Columns Layout</h3><p>Use the columns method to create a vertical masonry-style layout which emphasizes portrait aspect images. This layout will scale images within the columns to allow an elegant layout which fills the space available.</p></div>"
+		            },
+		            {
+		              "key": "gallery.columns.use_width",
+		              "notitle": true,
+		              "inlinetitle": "使用宽度<a href=# class=show-help></a><div class=hidden><h3>Use Width</h3><p>This setting allow you to set a target-width for columns in the columns layout. The value applied here decides the amount of columns that are able to fit into the width of the parent container. <em>* We strongly recommend using this setting for the columns layout, because it allows a responsive layout with less columns on smaller devices.</em></p></div>"
+		            },
+		            {
+		              "key": "gallery.columns.column_width",
+		              "title": "列宽 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Column Width</h3><p><em>* This setting only applies if</em> <code>use width</code> <em> is enabled.</em></p><p>Set a target-width for columns in the columns layout. The value applied here decides the amount of columns that are able to fit into the available width of the parent container.</p></div>",
+		              "step": 10
+		            },
+		            {
+		              "key": "gallery.columns.columns",
+		              "title": "列 <a href=# class=show-help></a><div class=hidden><h3>Columns</h3><p><em>* This setting only applies if</em> <code>use width</code> <em> is disabled.</em></p><p>Set the amount of columns to stack items within.</p></div>"
+		            },
+		            {
+		              "key": "gallery.columns.space",
+		              "title": "空间<span>[px, -1 for auto]</span><a href=# class=show-help></a><div class=hidden><h3>Space</h3><p>Space in <code>px</code> between items in the columns layout.</p></div>"
+		            }
+		          ]
+		        },
+		        {
+		          "type": "section",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "轮播布局 <a href=# class=show-help></a><div class=hidden><h3>Carousel Layout</h3><p>The carousel method displays multiple items in a carousel-like layout, supporting swipe, keyboard and video. You would normally use a <code>wide</code> layout, and image <strong>crop</strong> for the carousel.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.amount",
+		              "title": "数目 <a href=# class=show-help></a><div class=hidden><h3>Carousel Amount</h3><p>Set the amount of carousel items to display simultaneously on screen.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.use_height",
+		              "notitle": true,
+		              "inlinetitle": "使用高度 <a href=# class=show-help></a><div class=hidden><h3>Carousel Use Height</h3><p>This setting attempts to resize image based on height, so that they fit into the carousel without having to apply crop to the images for uniform sizes. <em>* This setting is experimental. We recommend leaving disabled, and using carousel-amount with an image crop.</em></p></div>",
+		              "toggleNext": 1
+		            },
+		            {
+		              "key": "gallery.carousel.target_height",
+		              "title": "目标高度 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Carousel Target Height</h3><p><em>* This setting only applies when</em> <code>use height</code> <em>is enabled</em>.</p><p>Set a target height for images in the carousel.</p></div>",
+		              "step": 10
+		            },
+		            {
+		              "key": "gallery.carousel.margin",
+		              "title": "空间 <span>[px]</span><a href=# class=show-help></a><div class=hidden><h3>Carousel Space</h3><p>Space in <code>px</code> between items in the carousel.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.interval",
+		              "title": "自动播放间隔 <span>[milliseconds, 0 = autoplay disabled]</span> <a href=# class=show-help></a><div class=hidden><h3>Carousel Interval</h3><p>Set the carousel to autoplay, so it slides to next items after a specified interval (ms). The Interval value should be in milliseconds, so 3000 means 3 second intervals.</p><p><em>Set value to 0 to disable autoplay.</em></p></div>",
+		              "step": 1000
+		            },
+		            {
+		              "key": "gallery.carousel.show_timer",
+		              "notitle": true,
+		              "inlinetitle": "显示计时器 <a href=# class=show-help></a><div class=hidden><h3>Carousel Show Timer</h3><p>When in autoplay mode, shows an animated visual element representing the interval.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.lazy",
+		              "notitle": true,
+		              "inlinetitle": "懒加载 <a href=# class=show-help></a><div class=hidden><h3>Carousel Interval</h3><p>Lazy-load images as they come into view, instead of preloading all images on page-load. This setting should be enable if you have dozens of images in your carousel. If there are only a few, you should perhaps disable for better loading performance.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.background",
+		              "notitle": true,
+		              "inline": true,
+		              "inlinetitle": "背景 <a href=# class=show-help></a><div class=hidden><h3>Carousel Background</h3><p>Adds a subtle background behind the carousel, which helps it stand out. Useful if you are using large space between items.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.nav",
+		              "inline": true,
+		              "notitle": true,
+		              "inlinetitle": "显示导航 <a href=# class=show-help></a><div class=hidden><h3>Carousel Show Nav</h3><p>Show the carousel navigation items: arrows and dots. You would only disable this option if you have enabled autoplay.</p></div>"
+		            },
+		            {
+		              "key": "gallery.carousel.tabs",
+		              "inlinetitle": "显示标签 <a href=# class=show-help></a><div class=hidden><h3>Show Tabs</h3><p>When enabled, tab buttons will be created for each image in the carousel <a href=https://demo.flamepix.com/examples/variations/carousel-tabs/ target=_blank>[see demo]</a>. Although carousel with tabs has several limitations, it can be very useful to create an interactive timeline-effect for small groups of images.</p><h4>Carousel Tabs Info</h4><ul><li>When tabs are enabled, carousel <code>amount</code> will always be set to 1, since tabs only support a single active item visible on screen.</li><li>Tabs work best with a small amount of images so that tabs fit on a single row.</li><li>Tabs should normally be used with the <code>Split View</code> gallery setting as in the <a href=https://demo.flamepix.com/examples/variations/carousel-tabs/ target=_blank>demo</a>.</li><li>Remember to add title and/or description to <code>items</code> when using split view.</li><li>Tabs are populated by image <em>name</em>, not <em>title</em>. This is because image titles are often too long, and will display in the carousel anyway. Tab titles should be short and accurate.</li><li>Unless all your images are the same aspect, you should use the <code>Crop Images</code> setting (for example 3:2) to achieve a uniform carousel layout. If images are at different size, the carousel will scale to the size of the tallest image in the carousel, which will leave a lot of empty space.</li></ul></div>",
+		              "toggleNext": 1
+		            },
+		            {
+		              "key": "gallery.carousel.tabs_position",
+		              "type": "radiobuttons",
+		              "activeClass": "btn-primary"
+		            },
+		            {
+		              "key": "gallery.carousel.loop",
+		              "inline": true,
+		              "notitle": true,
+		              "inlinetitle": "循环 <a href=# class=show-help></a><div class=hidden><h3>Carousel Loop</h3><p>Stich the carousel at end-points, so that it seemingly loops.</p></div>"
+		            }
+		          ]
+		        },
+		        {
+		          "type": "section",
+		          "items": [
+		            {
+		              "type": "help",
+		              "htmlClass": "section-title",
+		              "helpvalue": "幻灯片布局 <a href=# class=show-help></a><div class=hidden><h3>Gallery Slideshow Layout</h3><p>The slideshow is a powerful gallery layout that supports touchscreen gestures, keyboard, thumbnails, autoplay, fullscreen, video and much more. The slideshow method comes with comprehensive settings to account for a variety of layout combinations.</p><p><em>* The slideshow should normally be used with the</em> <code>wide</code> <em> gallery module width.</em></p></div>"
+		            },
+		            {
+						      "key": "gallery.slideshow.background",
+						      "inlinetitle": "用作介绍 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Intro</h3><p>When enabled, your gallery slideshow will be placed as an intro, at top of page, behind the main menu. This feature is useful for start pages and special feature pages.</p><p><a href=https://demo.flamepix.com/examples/plugins/slideshow-intro/ target=_blank>[View demo]</a></p><p><em>* By enabling this setting, slideshow will always be placed at top of page at full width.<br>* It is recommended to use the \"cover\" fit for slideshow intro.</em></p></div>",
+						      "toggleNext": 1
+						    },
+						    {
+				          "type": "section",
+				          "htmlClass": "inner-bg",
+				          "items": [
+								    {
+								      "key": "gallery.slideshow.menu_style",
+								      "titleMap": {
+								        "menu-absolute-default": "normal",
+								        "menu-absolute": "white",
+						            "menu-absolute-20": "white on 12% black",
+						            "menu-absolute-50": "white on 25% black"
+								      },
+								      "title": "菜单样式 <a href=# class=show-help></a><div class=hidden><h3>Menu Style</h3><p>Since the main menu is overlaying the slideshow, we use white text on a semi-transparent dark background by default, to make sure the menu remains visible.</p><p><em>* Menu style only applies for the topbar layouts.</em></p><p><code>normal</code><br>Keeps the default menu colors. Often, this will not create enough contrast to layer the menu on top of the slideshow.</p><p><code>white</code><br>Sets the menu text color to white, which makes the menu optimally visible when layered above the slideshow.</p><p><code>white on 12% black</code> <em>* default</em><br>Sets the menu text color to white, and adds a 12% semi-transparent dark background behind the menu. This is often required to make sure the menu is visible when layered on top of the slideshow.</p><p><code>white on 25% black</code><br>Sets the menu text color to white, and adds a 25% semi-transparent dark background behind the menu.</p></div>"
+								    },
+								    {
+								      "key": "gallery.slideshow.hide_context",
+								      "notitle": true,
+								      "inlinetitle": "隐藏环境<a href=# class=show-help></a><div class=hidden><h3>Hide Context</h3><p>A shortcut to entirely hide page context (title, description, content etc).</p></div>"
+								    },
+								    {
+								      "key": "gallery.slideshow.hide_footer",
+								      "notitle": true,
+								      "inlinetitle": "隐藏页脚 <a href=# class=show-help></a><div class=hidden><h3>Hide Footer</h3><p>A shortcut setting to hide the footer for this specific page.</p></div>"
+								    }
+								  ]
+								},
+		            {
+		              "key": "gallery.slideshow.width",
+		              "title": "宽度 <span>[% or px]</span><a href=# class=show-help></a><div class=hidden><h3>Slideshow Width</h3><p>Width of the slideshow inside the gallery module. Should normally be set to <code>100%</code>, which allows the slideshow to take 100% of the gallery module width.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.height",
+		              "title": "高度 <span>[% or px]</span><a href=# class=show-help></a><div class=hidden><h3>Slideshow Height</h3><p>Height of the slideshow inside the gallery module. Unlike the width setting, <code>100%</code> height indicates that the slideshow should take 100% height of device viewport.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.ratio",
+		              "title": "比率 <span>[留空 = 禁用]</span><a href=# class=show-help></a><div class=hidden><h3>Slideshow Ratio</h3><p>If enabled, ratio will override the <code>height</code> setting, and instead set the height of slideshow based on width and the aspect ratio setting. The advantage of this setting, is that it can make sure the slideshow retains a specific aspect ratio across all screen sizes, even handheld devices with different vertical orientation.</p><p><em>* Ratio can be added in two ways:</em></p><p><code>2/1</code> This gives a 2-to-1 wide aspect ratio.</p><p><code>2</code> This is the same as above.</p><p><code>1/2</code> This gives a 1-to-2 tall aspect ratio.</p><p><code>0.5</code> This is the same as above.</p><p><code>4/3</code> This gives a 4-to-3 wide aspect ratio.</p><p><code>1.33</code> This is the same as above.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.nav",
+		              "type": "radiobuttons",
+		              "activeClass": "btn-primary",
+		              "title": "导航 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Nav</h3><p>Set slideshow navigation items, which appear below the slideshow.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.fit",
+		              "type": "radiobuttons",
+		              "activeClass": "btn-primary",
+		              "title": "适应 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Fit</h3><p>This option decides how images scale within the available slideshow stage. Normally, you will choose between the <code>cover</code> or <code>contain</code> settings.</p><p><code>cover</code> Will scale images so they cover the entire slideshow stage. This looks elegant, but will often hide small parts of the image outside of the stage, so that it fits nicely. This effect is especially suitable for the startpage.</p><p><code>contain</code> This setting will scale images so they fit within the slideshow stage area without hiding parts of the image. This ensures the image is entirely visible, but there will be empty gaps either above/below or left/right of the image.</p><p><code>scaledown</code> This is the same as the cover-setting, except it will never scale images up.</p><p><code>none</code> With this setting, slideshow images will not get scaled. This is NOT recommended, because if it does not scale down images on small devices, the may become entirely un-viewable.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.transition",
+		              "type": "radiobuttons",
+		              "activeClass": "btn-primary",
+		              "title": "过渡 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Transition</h3><p>Choose between a few different slideshow transition effects. Default is <code>slide</code> for a dynamic direction-aware effect, but if you want something more subtle, try <code>crossfade</code> or <code>dissolve</code>.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.duration",
+		              "title": "过渡时间<span>[milliseconds]</span><a href=# class=show-help></a><div class=hidden><h3>Transition Duration</h3><p>Sets the duration of the slideshow transition, in milliseconds.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.captions",
+		              "notitle": true,
+		              "inlinetitle": "显示字幕 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Captions</h3><p>Show image captions at the bottom of slideshow.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.captions_hover",
+		              "notitle": true,
+		              "inlinetitle": "字幕悬停 <a href=# class=show-help></a><div class=hidden><h3>Captions Hover</h3><p>Only display image captions on mouse hover.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.loop",
+		              "notitle": true,
+		              "inlinetitle": "循环 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Loop</h3><p>When enabled, the slideshow will loop seamlessly between last and first image.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.autoplay",
+		              "notitle": true,
+		              "inlinetitle": "自动播放 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Autoplay</h3><p>When enabled, the slideshow will start in play-mode without user-intervention.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.interval",
+		              "title": "计时器 <span>[milliseconds]</span><a href=# class=show-help></a><div class=hidden><h3>Slideshow Interval</h3><p>Set the interval between slides when in play-mode, in milliseconds.</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.start_fullscreen",
+		              "notitle": true,
+		              "inlinetitle": "启动全屏 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Start Fullscreen</h3><p>When enabled, the page slideshow will start in fullscreen mode once the page is loaded. <em>*&nbsp;Fullscreen-mode in this context means it will occupy the full browser stage area, but it will not hi-jack the entire screen. This is not possible, because native fullscreen mode requires user-click from browsers for safety reasons.</em></p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.toggle_play",
+		              "notitle": true,
+		              "inlinetitle": "切换播放 <a href=# class=show-help></a><div class=hidden><h3>Slideshow Toggle Play</h3><p>Show the toggle-play button, which overlays the slideshow. If you disable this option, the visitor will have no means to start- or stop the slideshow (which in some cases, may be acceptable).</p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.hash",
+		              "notitle": true,
+		              "inlinetitle": "历史哈希 <a href=# class=show-help></a><div class=hidden><h3>Slideshow History Hash</h3><p>When enabled, the slideshow will add a image ID #hashtag in the URL when navigating images. This allows deep-linking to images inside the slideshow. <em>This option is disabled on touch devices, because it forces the browser URL bar to become visible for each slide, which can be very annoying.</em></p></div>"
+		            },
+		            {
+		              "key": "gallery.slideshow.show_timer",
+		              "notitle": true,
+		              "inlinetitle": "显示计时时器 <a href=# class=show-help></a><div class=hidden><h3>Show Timer</h3><p>When in play-mode, a visual timer bar displays under the slideshow, indicating how long until next slide is ready to display.</p></div>"
+		            }
+		          ]
+		        }
+          ]
+        },
+        {
+				  "type": "section",
+				  "items": [
+				    {
+		          "key": "gallery.sortby",
+		          "type": "radiobuttons",
+		          "htmlClass": "image-sorting",
+		          "activeClass": "btn-primary",
+		          "title": "图像排序 <a href=# class=show-help></a><div class=hidden><h3>Sort Images by</h3><p>Choose how to sort images in the page gallery.</p><p><code>Name</code><br>Sorts images by <em>file name</em>. This setting is normally sufficient if your images are named sequentially.</p><p><code>Title</code><br>Sorts images by image <em>title</em>. If image title is empty, file name will be used instead.</p><p><code>Date</code><br>Sorts images by <em>date</em>. This option uses the image's own EXIF date, which is normally from when the photo is taken. If there is no EXIF date, <em>server-date</em> will be used instead, which is normally from when the file is uploaded.<p><code>Shuffle</code><br>Shuffles the sorting order.</p><p><code>Custom</code><br>Sorts images by custom order, set from the gallery tab. Use direction <em>ascending</em> for custom sort, unless you want to invert your custom sorting.</p><h4>Directon</h4><p>Use ascending- or descending to set sort direction in combination with the above.</p><p><code>Ascending</code><br>Sorts images in ascending order. For names, this will be [0-9][A-Z]. For dates, this will be oldest first, newest last.<p><p><code>Descending</code><br>Sorts images in descending order. For names, this will be [Z-A][9-0]. For dates, this will be newest first, oldest last.<p><p><em>* Ascending/descending has no effect on shuffle.</em></p></div>"
+		        },
+		        {
+		          "key": "gallery.sort",
+		          "htmlClass": "include-selector asc-desc",
+		          "type": "radiobuttons",
+		          "activeClass": "btn-primary",
+		          "titleMap": {
+		            "asc": "<i class=\"fa fa-sort-amount-asc\"></i> 升序",
+		            "desc": "<i class=\"fa fa-sort-amount-desc\"></i> 降序"
+		          }
+		        }
+				  ]
+				},
+        {
+          "key": "gallery.title_size",
+          "type": "radiobuttons",
+          "activeClass": "btn-primary",
+          "title": "标题大小 <a href=# class=show-help></a><div class=hidden><h3>Title Size</h3><p>Set a relative size for titles in the page gallery module. Some layouts, like <code>vertical</code>, are suitable for large titles, while other layouts like <code>grid</code> may require smaller titles.</p></div>"
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+              "key": "gallery.split.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>拆分视图</strong> <a href=# class=show-help></a><div class=hidden><h3>Split View</h3><p>The split view setting allows you to split the gallery listing into two columns, with preview-image on one side, and image details (title, description, date) on the other. This setting works best with the <code>vertical</code> layout, but in a few rare cases, you could also use it with a 2-column grid.</p><p><em>Below is an example of a split view with the vertical layout.</em></p><div style='overflow:auto;'><div style='width:50%; padding: .5em; float:left;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:50%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div><div style='width:50%; padding: .5em; float:left;clear:both;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:50%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div></div><h3>Split View Ratio</h3><p>The split view is based on a 12-column grid, and default ratio <strong>6</strong> means the columns will split into two equally-sized columns. If you increase the ratio, the left column will occupy more space. The ratio can be set from <strong>1 to 12</strong>, to indicate how many columns the left side should occupy. Normally, you should be considering values between 4 and 8 for any functional layout.</p><p><em>* Example of ratio to set 4, which means left side will occupy 33.3% of the available width</em></p><div style='overflow:auto;'><div style='width:33.3%; padding: .5em; float:left;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:66.6%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div><div style='width:33.3%; padding: .5em; float:left;clear:both;'><div style='background:#CCC; padding: 2em 0;text-align: center;font-size:2em;'>image</div></div><div style='width:66.6%; padding: .5em; float:left;'><div style=''><strong>Title</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan justo vulputate arcu posuere scelerisque. Mauris at sollicitudin ante.</p></div></div></div><h3>Invert Split</h3><p>By default, the split is inverted so that preview-image is on the left, and text is on the right. If you disable invert, the text will be on the left, and image on the right.</p></div>",
+              "toggleNext": 2
+            },
+            {
+              "key": "gallery.split.ratio",
+              "title": "拆分比率"
+            },
+            {
+              "key": "gallery.split.invert",
+              "notitle": true,
+              "inlinetitle": "反向拆分"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+              "key": "gallery.caption.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>图像字幕叠加</strong> <a href=# class=show-help></a><div class=hidden><h3>Gallery Preview Image Caption</h3><p>Enable preview image captions, which <em>overlay</em> the images in the gallery. Useful for some layouts if you want to add details to the image without affecting layout flow.</p><p>* This setting is particularly useful when using either the <code>justified</code> or <code>columns</code> layout.</p></div>",
+              "toggleNext": 3
+            },
+            {
+              "key": "gallery.caption.items",
+              "title": "标题项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Caption Items</h3><p>Select default items to display in the gallery preview image captions. The following items are available: <span class=code-inline-block><code>title</code><code>date</code><code>description</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard.</em></p></div><span class='hidden selectize-items'>title,date,description</span>",
+          		"htmlClass": "settings_selectize"
+            },
+            {
+              "key": "gallery.caption.align",
+              "title": "标题对齐 <a href=# class=show-help></a><div class=hidden><h3>Caption Align</h3><p>Select alignment for gallery image captions.</p></div>",
+              "titleMap": {
+                "caption-top-left": "top-left",
+                "caption-top": "top",
+                "caption-top-right": "top-right",
+                "caption-bottom-right": "bottom-right",
+                "caption-bottom": "bottom",
+                "caption-bottom-left": "bottom-left"
+              },
+              "type": "radiobuttons",
+              "activeClass": "btn-primary"
+            },
+            {
+              "key": "gallery.caption.hover",
+              "notitle": true,
+              "inlinetitle": "字幕悬停 <a href=# class=show-help></a><div class=hidden><h3>Caption Hover</h3><p>Show gallery image captions only on mouse hover.</p></div>"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+              "key": "gallery.tooltip.enabled",
+              "notitle": true,
+              "inlinetitle": "<strong>工具提示</strong> <a href=# class=show-help></a><div class=hidden><h3>Gallery Tooltip</h3><p>Display a tooltip on image mouse hover, which reveals additional details for the image. This feature is useful when you want to only display preview images in the gallery layout, but have additional details available on image mouse hover.</p></div>",
+              "toggleNext": 1
+            },
+            {
+              "key": "gallery.tooltip.items",
+              "title": "项目 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Gallery Tooltip Items</h3><p>The following items are available for the gallery module tooltip: <span class=code-inline-block><code>title</code><code>date</code><code>description</code></span></p><p><em>* Add items by typing them in order, and hitting enter/return or comma on keyboard.</em></p></p></div><span class='hidden selectize-items'>title,date,description</span>",
+          		"htmlClass": "settings_selectize"
+            }
+          ]
+        },
+        {
+          "key": "gallery.classes",
+          "title": "CSS 类 <span>[tags]</span><a href=# class=show-help></a><div class=hidden><h3>Gallery CSS Classes</h3><p>Gallery classes are CSS classes that can be applied specifically to the <code>gallery</code> module of your page. You can add native X3 classes or custom CSS classes.</p><p><em>* Add classes by typing them in order, and hitting enter/return or comma on keyboard</em></p><h4>Example</h4><p><code>text-center</code> Center-aligns text inside each gallery items.</p><p><code>frame</code> Adds a frame around the preview image.</p><p><code>hr</code> Adds a horizontal rule between images (should only be used for vertical layout).</p><p><em>more examples to follow ...</em></p></div><span class='hidden selectize-items selectize-create'>frame,text-center,separator,hover,card,scrollbutton,hr</span>",
+          "htmlClass": "settings_selectize"
+        },
+        {
+          "key": "gallery.assets",
+          "title": "画廊的资源 <a href=# class=show-help></a><div class=hidden><h3>Gallery Assets</h3><p><em>* Use this setting to load gallery (images) from another folder.</em></p><p>By default, a page will display images specifically uploaded into the page's gallery. By selecting an <em>assets</em> folder, you can set the page to load images from a separate folder instead.</p><h4>Usage Examples</h4><p><em>How might this be useful?</em></p><p><code>Example 1</code> You might have a home page where you want to display latest three images from a specific gallery-page. Simply point assets to the specific gallery-page, and create the gallery-layout you want.</p><p><code>Example 2</code> You want to create a gallery page with the same images as another page, but with a different layout. No need to upload the same images again - simply refer the original gallery-folder in assets, and create an optional layout.</p></div>"
+        },
+        {
+          "key": "gallery.embed",
+          "title": "视频嵌入 <span>[carousel-only]</span><a href=# class=show-help></a><div class=hidden><h3>Video Embed</h3><p>Here you can add links to Youtube- or Vimeo videos, which will automatically be loaded into the specified gallery module.</p><h4>Important!</h4><p>Video embed currently only works for the <strong>Carousel</strong> layout, and should not be mixed with locally stored images.</p></div><span class='hidden selectize-items selectize-create'></span>",
+  					"htmlClass": "settings_selectize"
+        },
+        {
+          "key": "gallery.limit",
+          "title": "限制数量<span>[0 = 没有限制]</span> <a href=# class=show-help></a><div class=hidden><h3>Gallery Display Limit</h3><p>Use this setting to limit the amount of images displaying in the page. You may for example wish to display only the last 3 images for a certain page.</p></div>"
+        },
+
+
+        {
+				  "type": "section",
+				  "items": [
+				    {
+						  "key": "popup.captionEl",
+						  "notitle": true,
+						  "inlinetitle": "显示在X3弹出的字幕 <a href=# class=show-help></a><div class=hidden><h3>Display image captions in X3 popup</h3><p>Toggle display of image captions in the X3-popup for this page's gallery.</p><p><em>* This setting is inherited from global <strong>settings › popup › Show Caption.</strong></em></p></div>",
+						  "toggleNext": 1
+						},
+						{
+						  "key": "popup.caption.exif",
+						  "notitle": true,
+						  "inlinetitle": "显示EXIF标题<a href=# class=show-help></a><div class=hidden><h3>Show EXIF in X3 popup caption</h3><p>Toggle display of image EXIF data in popup caption.</p><p><em>* This setting is inherited from global <strong>settings › popup › caption fields › EXIF.</strong></em></p></div>"
+						}
+				  ]
+				},
+        {
+          "key": "gallery.hide",
+          "notitle": true,
+          "inlinetitle": "隐藏画廊模块 <a href=# class=show-help></a><div class=hidden><h3>Hide Gallery Module</h3><p>Use this setting to force-hide the gallery module from displaying in the page. <em>* Gallery module will in any case only display if the page contains images.</em></p></div>"
+        }
+      ]
+    },
+    {
+		  "type": "fieldset",
+		  "title": "图像",
+		  "htmlClass": "zebra2 image-defaults",
+		  "items": [
+		    {
+		      "type": "help",
+		      "helpvalue": "<h2>图像</h2><a href=# class='text-help'>Image defaults</a> for this folder.<div class=hidden><h3>Image Defaults</h3><p>Assign a default title, description and link to images in this folder.</p><p><em>* Settings here are inherited from global settings › page › image.</em></p><h4>Usage Examples</h4><p>These settings can be useful to create a default title that shows for all images in the folder. Optionally, you can use the <code>prepend</code> or <code>append</code> settings to <em>include</em> defaults into your unique titles and descriptions. For example, you may want to <em>prepend</em> an icon at the beginning of all image titles, or <em>append</em> a link at the end.</p></div>"
+		    },
+		    {
+          "type": "section",
+          "items": [
+            {
+				      "key": "gallery.image.title",
+				      "title": "默认图像标题<a href=# class=show-help></a><div class=hidden><h3>Default Image Title</h3><p>Use this setting to set a <em>default</em> title for all images in this folder.</p><p><code>default</code><br>When set to <em>default</em>, the default title will <em>only</em> display for images that don't have a unique title assigned.</p><p><code>prepend</code><br>When set to <em>prepend</em>, the default title will be <em>prepended</em> to your image title. <em>* If your image title is empty, default title will still be prepended.</em></p><p><code>append</code><br>When set to <em>append</em>, the default title will be <em>appended</em> to your image title. <em>* If your image title is empty, default title will still be appended.</em></p><h4>Some html allowed</h4><p>You are allowed to use the following html tags in image titles:<br><code>&lt;code&gt;&lt;a&gt;&lt;span&gt;&lt;em&gt;&lt;i&gt;&lt;b&gt;&lt;strong&gt;&lt;small&gt;&lt;s&gt;</code></p><h4>Dynamic Values</h4><p>You can use the following values in default titles, which are replaced dynamically. This may be useful if you are including file names, or links that refer to the image name.</p><p><code>{file_name_ext}</code> is replaced by the file name.<br><code>{file_name}</code> is replaced by the file name <em>without</em> extension.<br><code>{path}</code> is replaced by the file path of current folder.<br><code>{image_path}</code> is replaced by the path to the image.</p></div>"
+				    },
+				    {
+				      "key": "gallery.image.title_include",
+				      "htmlClass": "include-selector",
+				      "type": "radiobuttons",
+				      "activeClass": "btn-primary"
+				    }
+          ]
+        },
+        {
+          "type": "section",
+          "items": [
+            {
+				      "key": "gallery.image.description",
+				      "type": "textarea",
+				      "title": "默认的图像描述<a href=# class=show-help></a><div class=hidden><h3>Default Image Description</h3><p>Use this setting to set a <em>default</em> description for all images in this folder.</p><p><code>default</code><br>When set to <em>default</em>, the default description will <em>only</em> display for images that don't have a unique description assigned.</p><p><code>prepend</code><br>When set to <em>prepend</em>, the default description will be <em>prepended</em> to your image description. <em>* If your image description is empty, default description will still be prepended.</em></p><p><code>append</code><br>When set to <em>append</em>, the default description will be <em>appended</em> to your image description. <em>* If your image description is empty, default description will still be appended.</em></p><h4>Some html allowed</h4><p>You are allowed to use the following html tags in image descriptions:<br><code>&lt;a&gt;&lt;span&gt;&lt;em&gt;&lt;i&gt;&lt;b&gt;&lt;strong&gt;&lt;small&gt;&lt;s&gt;&lt;br&gt;&lt;mark&gt;&lt;img&gt;&lt;kbd&gt;&lt;code&gt;&lt;button&gt;</code></p><h4>Dynamic Values</h4><p>You can use the following values in default description, which are replaced dynamically. This may be useful if you are including file names, or links that refer to the image name.</p><p><code>{file_name_ext}</code> is replaced by the file name.<br><code>{file_name}</code> is replaced by the file name <em>without</em> extension.<br><code>{path}</code> is replaced by the file path of current folder.<br><code>{image_path}</code> is replaced by the path to the image.</p></div>"
+				    },
+				    {
+				      "key": "gallery.image.description_include",
+				      "htmlClass": "include-selector",
+				      "type": "radiobuttons",
+				      "activeClass": "btn-primary"
+				    }
+          ]
+        },
+        {
+		      "key": "gallery.image.link",
+		      "title": "默认图像链接<a href=# class=show-help></a><div class=hidden><h3>Default Image Link</h3><p>If you set an image link, clicking an image will open the link instead of the image. Use this setting to apply a <em>default</em> link to all images in this folder. <em>* It is unlikely you would want to use this setting, unless you want all images in this folder to link to an external resource based on dynamic values (see below).</em></p><h4>Dynamic Values</h4><p>You can use the following variables in your links, which are replaced dynamically:</p><p><code>{file_name_ext}</code> is replaced by the file name.<br><code>{file_name}</code> is replaced by the file name <em>without</em> extension.<br><code>{path}</code> is replaced by the file path of current folder.<br><code>{image_path}</code> is replaced by the path to the image.</p></div>"
+		    },
+		    {
+          "type": "section",
+          "htmlClass": "overflow-auto",
+          "items": [
+            {
+				      "key": "gallery.image.link_target",
+				      "title": "默认链接的目标<a href=# class=show-help></a><div class=hidden><h3>Default Link Target</h3><p>Link target decides in what window to open image links. Use this setting to set the <em>default</em> link target for all image links in this folder. <em>* Default link target only applies for images which have been assigned a link.</em></p><p><code>auto</code> Automatically determines target depending on the link.<br><code>_self</code> Opens the link in the same window.<br><code>_blank</code> Opens the link in a new window (normally a new tab).<br><code>popup window</code> Opens the link in a browser popup window.<br><code>X3 popup</code> Opens link in native X3 popup. <em>* Good for Youtube embeds, images and simple content, but should <u>not</u> be used when linking to full websites.</em></p></div>",
+				      "type": "radiobuttons",
+				      "titleMap": {
+				        "popup": "popup window",
+				        "x3_popup": "X3 popup"
+				      },
+				      "activeClass": "btn-primary"
+				    },
+				    {
+              "type": "help",
+              "helpvalue": "<strong>默认弹出窗口大小</strong> <span class=subtle>[width, height]</span><a href=# class=show-help></a><div class=hidden><h3>Default Popup Window Size</h3><p>Set the default <em>width</em> and <em>height</em> of the popup window for image links. <em>* Popup window size only applies for images which have been assigned a link set to popup target.</em></p><p><em>* Popup may downsize to fit the device screen.</em></p></div>"
+            },
+				    {
+				      "key": "gallery.image.popup_width",
+				      "htmlClass": "inline-group",
+				      "step": 10
+				    },
+				    {
+				      "key": "gallery.image.popup_height",
+				      "htmlClass": "inline-group",
+				      "step": 10
+				    }
+          ]
+        }
+		  ]
+		},
+    {
+      "type": "fieldset",
+      "title": "插件",
+      "htmlClass": "zebraz2 plugins",
+      "items": [
+        {
+          "type": "help",
+          "helpvalue": "<h2>插件</h2>各种各样的网页插件.<a href=# class=show-help></a><div class=hidden><h3>Page Plugins</h3><p>Page plugins are special features that can be added to a page.</p><p><em>* You can't always use multiple plugins on the same page. Use common sense!</em></p></div>"
+        },
+        {
+				  "type": "fieldset",
+				  "title": "页面介绍",
+				  "expandable": true,
+				  "htmlClass": "group-bg inner-zebra",
+				  "items": [
+				    {
+				      "type": "help",
+				      "helpvalue": "<a href=# class='text-help'>页面介绍</a>插件允许您在页面顶部添加图像、颜色或渐变介绍<a href=https://demo.flamepix.com/examples/plugins/intro-image/ target=_blank>[演示1]</a> <a href=https://demo.flamepix.com/examples/plugins/intro-gradient/ target=_blank>[演示2]</a><div class=hidden><h2>Page Intro Plugin</h2><p>The <em>page intro</em> plugin allows you to add an image, color or gradient as an introduction at the top of the page. The intro can display <em>behind-</em> or <em>below</em> the menu, at any height, and you can include page context items.</p><p><a href=https://demo.flamepix.com/examples/plugins/intro-image/ target=_blank>[Intro image demo]</a><br><a href=https://demo.flamepix.com/examples/plugins/intro-gradient/ target=_blank>[Intro gradient demo]</a></p></div>"
+				    },
+				    {
+				      "key": "plugins.image_background.enabled",
+				      "inlinetitle": "启用 <a href=# class=show-help></a><div class=hidden><h2>Intro Enabled</h2><p>Enable the intro background plugin.</p><p><em>* You also need to populate the <code>source</code> field to enable the intro plugin.</em></p></div>",
+				      "toggleNext": 7
+				    },
+				    {
+				      "key": "plugins.image_background.src",
+				      "title": "背景来源 <span>[image, color or gradient]</span><a href=# class=show-help></a><div class=hidden><h2>Intro Background Source</h2><p>Add a path to an image that will be used as background in the intro area, or use a solid color or a gradient.</p><h4>Image</h4><p>Include the path to the image you want to use as background in the intro area. Normally, you would use a full-size image in <code>cover</code> mode, but you can also use a repeating background image. <em>Examples:</em></p><p><code>imagename.jpg</code><br>Link to an image inside the current folder.</p><p><code>/path/to/imagename.jpg</code><br>Link to an image in another folder relative to your website root.</p><p><strong>Tip!</strong> Name your background-image file with double <strong>__underscore</strong> to prevent it from displaying in the page gallery module. For example <code>__imagename.jpg</code>.</p><h4>Color</h4><p>You can also use a solid color background, for example <code>#FFC000</code> or <code>tomato</code>.</p><h4>Gradient</h4><p>You can also use CSS gradients, for example <code>linear-gradient(red, orange)</code> or <code>radial-gradient(farthest-corner, yellow, #f06d06)</code>.</p><p><em>* <a href=https://css-tricks.com/css3-gradients/ target=_blank>CSS gradients</a> are very powerful, but we can't cover all the syntax here.<br>** Add gradients without vendor-prefixes.</em><br></p><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients target=_blank>* developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients</a><br><a href=http://www.w3schools.com/css/css3_gradients.asp target=_blank>* www.w3schools.com/css/css3_gradients.asp</a><br><a href=http://uigradients.com/ target=_blank>* uigradients.com</a></p></div>"
+				    },
+				    {
+		          "type": "section",
+		          "htmlClass": "overflow-auto custom-bg2",
+		          "items": [
+		          	{
+		              "type": "help",
+		              "helpvalue": "<strong>在介绍中显示</strong> <a href=# class=show-help></a><div class=hidden><h3>Show title, description and content in intro</h3><p>This setting allows you to display page context items <em>title</em>, <em>description</em> and <em>content</em> directly in the intro area.</p><h4>Notes</h4><ul><li>Items which are included, will be removed from their original location.</li><li>If you are including substantial <em>content</em>, you need to make sure your specificed intro height is sufficient. Content will not be scrollable within the intro area.</li><li>Items will be set to white color variations by default. If you need to change the styles, you will need to apply custom CSS.</li></ul><h4>Tip!</h4><p>There is a hidden method to extract other html from your content: Simply add a div container in your content, with the <code>image-intro-content</code> class, and it will automatically be added into the intro area. For example:<br><code>&#x3C;div class=image-intro-content&#x3E;Your content here&#x3C;/div&#x3E;</code></p></div>"
+		            },
+		          	{
+						      "key": "plugins.image_background.page_meta_title",
+						      "htmlClass": "inline-group",
+						      "inlinetitle": "title"
+						    },
+						    {
+						      "key": "plugins.image_background.page_meta_description",
+						      "htmlClass": "inline-group",
+						      "inlinetitle": "description"
+						    },
+						    {
+						      "key": "plugins.image_background.page_meta_content",
+						      "htmlClass": "inline-group",
+						      "inlinetitle": "content"
+						    }
+		          ]
+		        },
+            {
+		          "type": "section",
+		          "items": [
+		          	{
+		              "key": "plugins.image_background.custom_height",
+		              "inlinetitle": "自定义高度 <a href=# class=show-help></a><div class=hidden><h2>Custom Height</h2><p><em>* Custom height is required if you are using a color or gradient source.</em></p><p>Select this option to set a custom height for the intro area. When this setting is enabled, you will also see options <em>position</em> and <em>size</em> for the background source. If custom height is disabled, height will adjust to image-size.</p><ul><li>Disable custom height if you want to display a fully visible image.</li><li>It is recommended to enable custom height if you are using a repeating background pattern.</li><li>Custom height always applies when source is set to solid color or gradient.</li><li>Width of the intro area is always 100%.</li></ul></div>",
+		              "toggleNext": 3
+		            },
+		            {
+		              "key": "plugins.image_background.height",
+		              "title": "高度 <span>[% or px]</span><a href=# class=show-help></a><div class=hidden><h2>Intro Height</h2><p>Set the height of the intro as a percentage of the visible viewport, or at a fixed px height.</p></div>"
+		            },
+		            {
+						      "key": "plugins.image_background.size",
+						      "htmlClass": "settings_selectize",
+						      "title": "背景尺寸 <a href=# class=show-help></a><div class=hidden><h2>Background Size</h2><p>Background size decides how the source scales within the intro area. Mainly used for image sources, but may have some effect on gradients also.</p><p><code>auto</code><br>Your background image will display at original size. Use this option if you have a repeating background pattern, or if you don't want the image to scale to fit screen.</p><p><code>cover</code> <em>*default</em><br>Scale the background image so that the intro area is completely covered. Some parts of the image may not be in view within the intro area.</p><p><code>contain</code><br>Scale the image to the largest size such that both its width and its height can fit inside the intro area. <em>* Normally does not look nice, as it means the image will repeat within the intro area.</em></p><p><code>[width] [height]</code><br>Set custom width and height values (using units %, px or vw/vh). The first value sets the width, the second value sets the height. If only one value is given, the second is set to \"auto\".</p><p><strong>CSS Background Size</strong><br><a href=http://www.w3schools.com/cssref/css3_pr_background-size.asp target=_blank>www.w3schools.com/cssref/css3_pr_background-size.asp</a></p><p><em>* Size does not apply for solid colors.</em></p></div><span class='hidden selectize-items selectize-create selectize-single'>auto,cover,contain</span>"
+						    },
+		            {
+						      "key": "plugins.image_background.position",
+						      "title": "背景位置 <span>[x, y]</span><a href=# class=show-help></a><div class=hidden><h2>Background Position</h2><p>Set the starting position for the background image. Since the image normally gets cropped within the intro area, position is set to center <code>50% 50%</code> by default.</p><p><strong>CSS Background Position</strong><br><a href=http://www.w3schools.com/cssref/pr_background-position.asp target=_blank>www.w3schools.com/cssref/pr_background-position.asp</a></p><p><em>* Position does not apply for solid colors.</em></p></div>"
+						    }
+		          ]
+		        },
+		        {
+				      "key": "plugins.image_background.fixed",
+				      "inlinetitle": "固定 <span>[no scroll]</span><a href=# class=show-help></a><div class=hidden><h2>Fixed mode</h2><p>Creates a cool effect where the background image remains fixed when scrolling.</p><p><strong style='color:tomato'>Warning!</strong><br>When using fixed background, <em>position-</em> and <em>size</em> may not work as expected. This is because the browser positions- and scales the background relative to the browser viewport when using fixed attachment. This may be especially noticeable with the sidebar layouts.</p><p><em>* Fixed mode does not apply when using a solid color.<br>** Fixed mode does not work for mobile devices, so the background will scroll as usual.</em></p></div>"
+				    },
+				    {
+		          "type": "section",
+		          "items": [
+		            {
+						      "key": "plugins.image_background.below_menu",
+						      "inlinetitle": "覆盖菜单 <a href=# class=show-help></a><div class=hidden><h2>Overlay Menu</h2><p>When enabled, menu will overlay the intro, which is attached to top of page. When disabled, the intro is attached <em>below</em> the menu.</p><p><em>* Overlay menu only applies for topbar layouts.</em></p></div>",
+						      "toggleNext": 1
+						    },
+						    {
+						      "key": "plugins.image_background.menu_style",
+						      "type": "radiobuttons",
+				      		"activeClass": "btn-primary",
+						      "titleMap": {
+						        "menu-absolute-default": "normal",
+						        "menu-absolute": "white",
+						        "menu-absolute-20": "white on 12% black",
+						        "menu-absolute-50": "white on 25% black"
+						      },
+						      "title": "菜单样式 <a href=# class=show-help></a><div class=hidden><h2>Menu Style</h2><p>Since the main menu is overlaying the intro, we use white text on a semi-transparent dark background by default, to make sure the menu remains visible.</p><p><code>normal</code><br>Keeps the default menu colors. Often, this will not create enough contrast to layer the menu on top of the intro.</p><p><code>white</code><br>Sets the menu text color to white, which makes the menu optimally visible when layered above the intro.</p><p><code>white on 12% black</code> <em>* default</em><br>Sets the menu text color to white, and adds a 12% semi-transparent dark background behind the menu. This is often required to make sure the menu is visible when layered on top of the intro.</p><p><code>white on 25% black</code><br>Sets the menu text color to white, and adds a 25% semi-transparent dark background behind the menu.</p></div>"
+						    }
+		          ]
+		        },
+				    {
+				      "key": "plugins.image_background.hide_context",
+				      "notitle": true,
+				      "inlinetitle": "隐藏环境 <a href=# class=show-help></a><div class=hidden><h2>Hide Context</h2><p>A shortcut to entirely hide page context (title, description, content) for this page.</p></div>"
+				    },
+				    {
+				      "key": "plugins.image_background.hide_footer",
+				      "notitle": true,
+				      "inlinetitle": "隐藏页脚 <a href=# class=show-help></a><div class=hidden><h2>Hide Footer</h2><p>A shortcut to hide the footer for this page.</p></div>"
+				    }
+				  ]
+				},
+				{
+				  "type": "fieldset",
+				  "title": "背景",
+				  "expandable": true,
+				  "htmlClass": "group-bg inner-zebra",
+				  "items": [
+				    {
+				      "type": "help",
+				      "helpvalue": "<a href=# class='text-help'>背景插件</a>允许您添加背景图像，渐变或颜色到您的网页。 <a href=https://demo.flamepix.com/examples/plugins/background-image/ target=_blank>[演示]</a><div class=hidden><h2>Background Plugin</h2><p>The background plugin allows you to add an image, gradient or color as background for your page. The background can be attached to top or content.</p><p><a href=https://demo.flamepix.com/examples/plugins/background-image/ target=_blank>[Background plugin demo]</a></p></div>"
+				    },
+				    {
+				      "key": "plugins.background.enabled",
+				      "htmlClass": "highlight",
+				      "inlinetitle": "启用 <a href=# class=show-help></a><div class=hidden><h2>Background Enabled</h2><p>Enable or disable the background plugin for this page.</p><p><em>* You also need to set either source or background color.</em></p></div>",
+				      "toggleNext": 7
+				    },
+				    {
+				      "key": "plugins.background.src",
+				      "title": "背景来源 <span>[image or gradient]</span><a href=# class=show-help></a><div class=hidden><h2>Background Source</h2><p>Add an image or gradient as source of the background.</p><h4>Image</h4><p>Include the path to the image you want to use as background. Normally, you would use a full-size image in <code>cover</code> mode, but you can also use a repeating background image. <em>Examples:</em></p><p><code>imagename.jpg</code><br>Link to an image inside the current folder.</p><p><code>/path/to/imagename.jpg</code><br>Link to an image in another folder relative to your website root.</p><p><strong>Tip!</strong> Name your background-image file with double <strong>__underscore</strong> to prevent it from displaying in the page gallery module. For example <code>__imagename.jpg</code>.</p><h4>Gradient</h4><p>You can also use CSS gradients, for example <code>linear-gradient(red, orange)</code> or <code>radial-gradient(farthest-corner, yellow, #f06d06)</code>.</p><p><em>* <a href=https://css-tricks.com/css3-gradients/ target=_blank>CSS gradients</a> are very powerful, but we can't cover all the syntax here.<br>** Add gradients without vendor-prefixes.</em><br></p><p><a href=https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients target=_blank>* developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients</a><br><a href=http://www.w3schools.com/css/css3_gradients.asp target=_blank>* www.w3schools.com/css/css3_gradients.asp</a><br><a href=http://uigradients.com/ target=_blank>* uigradients.com</a></p></div>",
+				      "placeholder": "__filename.jpg"
+				    },
+				    {
+				      "key": "plugins.background.color",
+				      "title": "背景颜色 <span>[optional]</span><a href=# class=show-help></a><div class=hidden><h2>Background Color</h2><p>Add a background color. The background color will only be visible if you are not using a background source, if if the source is non-repeating or semi-transparent.</p></div>",
+				      "placeholder": "#FFC000"
+				    },
+				    {
+				      "key": "plugins.background.repeat",
+				      "title": "背景重复 <a href=# class=show-help></a><div class=hidden><h2>Background Repeat</h2><p>Decides if background source will be repeated. By default, a background-image is repeated both vertically and horizontally.</p><p><strong>CSS Background Repeat</strong><br><a href=http://www.w3schools.com/cssref/pr_background-repeat.asp target=_blank>www.w3schools.com/cssref/pr_background-repeat.asp</a></p></div>",
+				      "type": "radiobuttons",
+				      "activeClass": "btn-primary"
+				    },
+				    {
+				      "key": "plugins.background.size",
+				      "htmlClass": "settings_selectize",
+				      "title": "背景尺寸 <a href=# class=show-help></a><div class=hidden><h2>Background Size</h2><p>Background size decides how the background image scales. Mainly used for image sources, but may have some effect on gradients also.</p><p><code>auto</code><br>Your background image will display at original size. Use this option if you have a repeating background pattern, or if you don't want the image to scale to fit screen.</p><p><code>100%</code> <em>*default</em><br>Scale the background image to cover width of screen.</p><p><code>[width] [height]</code><br>Set custom width and height values (using units %, px or vw/vh). The first value sets the width, the second value sets the height. If only one value is given, the second is set to \"auto\".</p><p><strong>CSS Background Size</strong><br><a href=http://www.w3schools.com/cssref/css3_pr_background-size.asp target=_blank>www.w3schools.com/cssref/css3_pr_background-size.asp</a></p></div><span class='hidden selectize-items selectize-create selectize-single'>auto,100%,cover,contain</span>"
+				    },
+				    {
+				      "key": "plugins.background.position",
+				      "title": "背景位置 <span>[x, y]</span><a href=# class=show-help></a><div class=hidden><h2>Background Position</h2><p>Set the starting position for the background image. Default starting position is center top <code>50% 0%</code>.</p><p><strong>CSS Background Position</strong><br><a href=http://www.w3schools.com/cssref/pr_background-position.asp target=_blank>www.w3schools.com/cssref/pr_background-position.asp</a></p><p><em>* Position does not apply for solid colors.</em></p></div>"
+				    },
+				    {
+				      "key": "plugins.background.fixed",
+				      "inlinetitle": "固定 <span>[no scroll]</span><a href=# class=show-help></a><div class=hidden><h2>Fixed mode</h2><p>Creates a cool effect where the background image remains fixed when scrolling.</p><p><strong style='color:tomato'>Warning!</strong><br>When using fixed background, <em>position-</em> and <em>size</em> may not work as expected. This is because the browser positions- and scales the background relative to the browser viewport when using fixed attachment. This may be especially noticeable with the sidebar layouts.</p><p><em>* Fixed mode does not apply when using a solid color.<br>** Fixed mode does not work for mobile devices, so the background will scroll as usual.</em></p></div>"
+				    },
+				    {
+						  "type": "section",
+						  "items": [
+						    {
+						      "key": "plugins.background.attach",
+						      "type": "selectfieldset",
+						      "title": "依附到 <a href=# class=show-help></a><div class=hidden><h2>背景依附</h2><p>将背景附加到页面或内容.</p><p><strong>page</strong><br>When attached to page, the background will start from top of page and the main menu will overlay the background. You will have a few options to style the menu.</p><p><strong>content</strong><br>When attached to content, the background will start from your page content.</p></div>",
+						      "items": [
+						        {
+								      "key": "plugins.background.menu_style",
+								      "type": "radiobuttons",
+								      "activeClass": "btn-primary",
+								      "title": "菜单样式 <span>[topbar only]</span><a href=# class=show-help></a><div class=hidden><h2>Menu Style</h2><p>Since the main menu is overlaying the background, you can choose from a few special menu styles, to make sure the menu remains visible over the background.</p><p><em>* Menu styles only apply for topbar layouts</em></p><p><code>normal</code> <em>* default</em><br>Keeps the default menu colors.</p><p><code>white</code><br>Sets the menu text color to white, which may make the menu more visible when layered above a background.</p><p><code>white on 12% black</code> <br>Sets the menu text color to white, and adds a 12% semi-transparent dark background behind the menu.</p><p><code>white on 25% black</code><br>Sets the menu text color to white, and adds a 25% semi-transparent dark background behind the menu.</p></div>",
+								      "titleMap": {
+								        "": "normal",
+								        "menu-a-white": "white",
+								        "menu-a-20": "white on 12% black",
+								        "menu-a-50": "white on 25% black"
+								      }
+								    },
+						        {
+								      "type": "help",
+								      "htmlClass" : "hidden"
+								    }
+						      ]
+						    }
+						  ]
+						}
+				  ]
+				},
+        {
+          "type": "fieldset",
+          "title": "视频介绍",
+          "expandable": true,
+          "htmlClass": "group-bg inner-zebra",
+          "items": [
+            {
+              "type": "help",
+              "helpvalue": "使用 <a href=# class='text-help'>视频介绍插件</a> on your home page, or to emphasize certain special pages. <a href=https://demo.flamepix.com/examples/plugins/video-intro/ target=_blank>[see demo]</a><div class=hidden><h2>Video Intro Plugin</h2><p>The video-background plugin allows you to use a video as page background. This plugin can be useful on your home page, or to emphasize certain special pages. To add a video-background to any page, simply upload an mp4 video file, and set the video source.</p><p><a href=https://demo.flamepix.com/examples/plugins/video-intro/ target=_blank>[see demo]</a></p><h3>Limitations</h3><ul><li><strong>Does not work on mobile</strong><br>Unfortunately, the video-background does not work on mobile devices for several reasons. Instead, there is a fallback for mobile devices. * <em>See details in mobile fallback section below.</em></li><li><strong>Video Cropped</strong><br>As you may understand, for a <em>background</em> video to display nicely at any height, on any device, on any screen aspect, the video may be <em>cropped</em> appropriately to 'fit' the designated stage area.</li><li><strong>Does not work for sidebar layout</strong><br>Because of the huge technical difference of this layouts, the video intro plugin currently only works for the topbar- and slidemenu layouts.</li><li><strong>H.264 encoded mp4 format</strong><br>Video in HTML5 is limited by various file formats and codecs. To be sure that your video displays properly across all browsers, the video should be encoded in H.264 codec, in mp4 format <a href='http://caniuse.com/#feat=mpeg4' target='_blank'>[ref]</a>.</li><li><strong>2MB Upload Limit</strong><br>Your host <em>may</em> have a 2MB upload limitation, in which case you would need to upload large video files by FTP into appropriate folders.</li><li><strong>Browser remembers play-state</strong><br>If a visitor clicks to 'pause' the video, the video will also be paused next time the page loads. This is just common sense.</li><li><strong>Results of slow internet</strong><br>If your video file is large, and the visitor is on a relatively slow connection, they may see the video start- and stop frequently while buffering.</li><li><strong>Autoplay disabled</strong><br>Some visitors have simply disabled autoplay from their browser, in which case the video simply won't autoplay. </li><li><strong>Loop stitch</strong><br>Don't expect the video loop to stich seamlessly on all browsers, even if your video is made to do so. Depending on the browser, it might take several milliseconds before the video starts re-playing.</li></ul><h3>Mobile Fallback</h3><p>For several obvious reasons, background-video will not display for mobile devices, and will instead display the poster image (or poster-mobile image), which is an acceptable fallback.</p><ul><li>Most mobile devices (including iphone/ipad) do not allow autoplay, mainly to prevent unsolicited cellular download. There is no \"fix\" for this.</li><li>Even if the video was loaded in pause-mode, clicking the native play button would open the video in a player-window, so it wouldn't be a background video.</li><li>A video may require too much bandwidth, and will often stutter on mobile.</li></ul><h3>Recommendations</h3><p>The background-video plugin is intended to be used as a motion-background to compliment the page content. Don't use video just because you can or because it looks nice. We recommend using a short, subtle video loop, without sound, lasting only a few seconds, and compressed at acceptable file size.</p><p><strong>Useful Links:</strong><a href='http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video#considerations' target='_blank'>[1]</a><a href='http://www.sitepoint.com/designing-with-video-backgrounds' target='_blank'>[2]</a><a href='http://www.punkchip.com/autoplay-is-still-bad-for-all-users' target='_blank'>[3]</a></p></div>"
+            },
+            {
+              "key": "plugins.video_background.src",
+              "htmlClass": "highlight",
+              "title": "视频源 <a href=# class=show-help></a><div class=hidden><h2>Video Source</h2><p>If you have uploaded the video file into the same folder, then simply add the filename, for example <code>myvideo.mp4</code>. Optionally, you can use an absolute link to an external mp4 video file, or a root-relative path to an mp4 file in another folder.</p><p><em>* Adding a video source effectively enables the video-background plugin.</em></p><p><strong>Tip!</strong> Prefix your video file with double <strong>__underscore</strong> to prevent it from displaying in this page's video gallery. For example <code>__myvideo.mp4</code>.</p></div>",
+              "placeholder": "__somefile.mp4"
+            },
+            {
+              "key": "plugins.video_background.poster",
+              "title": "海报 <span>[optional]</span><a href=# class=show-help></a><div class=hidden><h3>Poster</h3><p>添加上传到页面的JPG文件的名称, for example <code>poster.jpg</code>, that represents the video. The poster image may (or may not) display before the video starts playing. Furthermore, the poster-image will be displayed on mobile devices instead of the video.</p><p><em>* If you leave this value empty, the default page preview-image will be used.</em></p><p><strong>PS!</strong> If you don't want the poster image to display in the page gallery, name the file prefixed with double <strong>__underscore</strong>, for example <code>__poster.jpg</code>. File names starting with double __underscore are hidden from the page gallery module.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.poster_mobile",
+              "title": "移动海报 <span>[可选]</span><a href=# class=show-help></a><div class=hidden><h3>Poster Mobile</h3><p>Use this setting if you want to set a different poster image specifically for mobile devices.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.menu_style",
+		          "titleMap": {
+				        "": "normal",
+				        "menu-absolute": "white",
+		            "menu-absolute-20": "white on 12% black",
+		            "menu-absolute-50": "white on 25% black"
+				      },
+              "title": "菜单样式 <a href=# class=show-help></a><div class=hidden><h3>Menu Style</h3><p>Since the main menu is overlaying the video, we use white text on a semi-transparent dark background by default, to make sure the menu remains visible.</p><p><code>normal</code><br>Keeps the default menu colors. Often, this will not create enough contrast to layer the menu on top of the video.</p><p><code>white</code><br>Sets the menu text color to white, which makes the menu optimally visible when layered above the video.</p><p><code>white on 12% black</code> <em>* default</em><br>Sets the menu text color to white, and adds a 12% semi-transparent dark background behind the menu. This is often required to make sure the menu is visible when layered on top of the video.</p><p><code>white on 25% black</code><br>Sets the menu text color to white, and adds a 25% semi-transparent dark background behind the menu.</p></div>",
+              "type": "radiobuttons",
+						  "activeClass": "btn-primary"
+            },
+            {
+              "key": "plugins.video_background.height",
+              "title": "高度 <span>[0-100 %]</span><a href=# class=show-help></a><div class=hidden><h3>Height</h3><p>Set the height of the video-background as a percentage value of the screens visible viewport. By default, this value is set to 100, which sets the video to cover the entire visible stage area.</p></div>",
+              "step": 5
+            },
+            {
+              "key": "plugins.video_background.autoplay",
+              "notitle": true,
+              "inlinetitle": "自动播放 <a href=# class=show-help></a><div class=hidden><h3>Autoplay</h3><p>Sets the video to autoplay once it is partially loaded.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.toggleplay",
+              "notitle": true,
+              "inlinetitle": "切换播放按钮 <a href=# class=show-help></a><div class=hidden><h3>Toggleplay</h3><p>Displays a small play/pause button at the bottom of the video on mouse hover. It is strongly recommended to keep this button enabled, for visitors with motion-disorientation, autism and for many other reasons a visitor may not wish to download- and view a video in loop.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.loop",
+              "notitle": true,
+              "inlinetitle": "循环 <a href=# class=show-help></a><div class=hidden><h3>Loop</h3><p>Sets the video to loop.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.muted",
+              "notitle": true,
+              "inlinetitle": "静音 <a href=# class=show-help></a><div class=hidden><h3>Muted</h3><p>Mutes the video. Ideally, background-videos should be encoded without sound, to optimize file-size.</p></div>"
+            },
+            {
+              "key": "plugins.video_background.hide_context",
+              "notitle": true,
+              "inlinetitle": "隐藏环境 <a href=# class=show-help></a><div class=hidden><h3>Hide Context</h3><p>A shortcut to entirely hide page context (title, description, content etc).</p></div>"
+            },
+            {
+              "key": "plugins.video_background.hide_footer",
+              "notitle": true,
+              "inlinetitle": "隐藏页脚 <a href=# class=show-help></a><div class=hidden><h3>Hide Footer</h3><p>A shortcut setting to hide the footer for this specific page.</p></div>"
+            }
+          ]
+        },
+        {
+          "type": "fieldset",
+          "title": "Fotomoto",
+          "expandable": true,
+          "htmlClass": "group-bg inner-zebra",
+          "items": [
+            {
+              "type": "help",
+              "helpvalue": "使用 <a href=# class='text-help'>Fotomoto 插件</a> 添加电子商务到您的网站. <a href=https://demo.flamepix.com/examples/plugins/fotomoto/ target=_blank>[demo]</a><div class=hidden><h2>Fotomoto Plugin</h2><p>Integrate <a href=\"http://www.fotomoto.com/\" target=_blank>Fotomoto</a> e-commerce seamlessly into your X3 website with this plugin.</p><div class=\"embed-responsive embed-responsive-16by9\"></div><h3>Instructions</h3><ol><li>Create a <a href=\"http://www.fotomoto.com/\" target=_blank>Fotomoto</a> account.</li><li>Enable X3 Fotomoto plugin from global <em>settings &rsaquo; plugins &rsaquo; Fotomoto</em>.</li><li>Add your Fotomoto Store ID.</li><li>Done!</li></ol><p><em>* Prices and product management is done from your Fotomoto Dashboard.</em></p></div>"
+            },
+            {
+              "key": "plugins.fotomoto.enabled_page",
+              "inlinetitle": "启用 <a href=# class=show-help></a><div class=hidden><h3>Enable Fotomoto for this page</h3><p>Enable or disable Fotomoto for this page.</p><p>You can set the default from global <em>settings &rsaquo; plugins &rsaquo; Fotomoto &rsaquo; Enabled by default</em>.</p></div>",
+              "toggleNext": 2
+            },
+            {
+						  "type": "section",
+						  "items": [
+		            {
+		              "key": "plugins.fotomoto.buy_button",
+		              "inlinetitle": "添加购买按钮到图像 <a href=# class=show-help></a><div class=hidden><h3>Add Buy button to images</h3><p>When <strong>enabled</strong>, X3 will automatically add \"Buy\" buttons to all images for this page.</p><p>When <strong>disabled</strong>, you will need to manually add \"Buy\" buttons to your images. This offers more control of style and layout for your buttons if required.</p><h4>How to manually add \"Buy\" buttons</h4><p>To add your own buy buttons, simply include a link in your image description (or title) with the <code>fotomoto-buy</code> class. For example:</p><p><pre><code>&lt;a href=# class=&quot;fotomoto-buy&quot;&gt;buy&lt;/a&gt;</code></pre><pre><code>&lt;button class=&quot;button fotomoto-buy&quot;&gt;buy&lt;/button&gt;</code></pre></p><p><code>Tip!</code> Include your button html in <em>Page settings &rsaquo; Image &rsaquo; <strong>Default Image Description</strong></em> to apply it to <em>all</em> images on the page without having to add to each image individually.</p></div>"
+		            }
+		          ]
+		        },
+		        {
+              "key": "plugins.fotomoto.collection",
+              "title": "Fotomoto收藏 <span>* 可选</span><a href=# class=show-help></a><div class=hidden><h3>Default Collection</h3><p>Add new images to a specific Fotomoto collection by including the collection name.</p><p><em>* Leave blank to use default collection assigned from Fotomoto.</em></p></div>"
+            },
+            {
+              "type": "help",
+              "htmlClass": "hidden"
+            },
+		        {
+              "type": "help",
+              "htmlClass": "fotomoto-disabled",
+              "helpvalue": "<span class=\"label label-warning\">禁用</span> &nbsp; Fotomoto 插件, 首先启用它从全局 <strong>设置 &rsaquo; 插件 &rsaquo; Fotomoto</strong>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "htmlClass": "text-center",
+      "items": [
+		    {
+		      "type": "submit",
+		      "htmlClass": "hidden save-settings",
+		      "title": "保存"
+		    }
+		  ]
+		}
+  ]
+}

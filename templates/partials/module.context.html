@@ -1,0 +1,143 @@
+
+{# CONTEXT MODULE #}
+
+{# Vars #}
+{% set p = page %}
+{% set context = p.context %}
+{% set page_description = p.description %}
+{% set content = (p.include.content_prepend|trim ~ ' ' ~ p.content ~ ' ' ~ p.include.content_append|trim)|trim|shortcode|escapecode %}
+
+{# Date #}
+{% set date = p.date|default(p.updated) %}
+{% if page.settings.date_format == 'timeago' %}
+	{% set date_formatted = date|date("d F Y") %}
+	{% set date_class = 'date timeago' %}
+{% else %}
+	{% set date_formatted = date|date(page.settings.date_format|default('d F Y')) %}
+	{% set date_class = 'date' %}
+{% endif %}
+{% set time_tag = '<time itemprop=dateCreated datetime="' ~ date|date("c") ~ '" class="' ~ date_class ~ '">' ~ date_formatted ~ '</time>' %}
+
+{# Set items order #}
+{# title,label,amount,folder_amount,date,preview,description,content #}
+{% set items = context.items|split(',') %}
+
+{# Output items #}
+{% for item in items %}
+
+	{# Title #}
+	{% if item == 'title' %}
+	<h1 class='title style-icon'><span>{{ page_title }}</span></h1>
+	{% endif %}
+
+	{# Label #}
+	{% if item == 'label' %}
+	<h1 class='title'><span>{{ page.label }}</span></h1>
+	{% endif %}
+
+	{# Amount #}
+	{% if item == 'amount' %}
+	{% set amount = gallery.images|length %}
+	<h6 class=amount><span>{{ amount }} {{ pluralize(amount, 'image', 'images') }}</span></h6>
+	{% endif %}
+
+	{# Folders Amount #}
+	{% if item == 'folders_amount' %}
+	{% set folders_amount = folder.children_count %}
+	<h6 class=folder_amount><span>{{ folders_amount }} {{ pluralize(folders_amount, 'album', 'albums') }}</span></h6>
+	{% endif %}
+
+	{# Date #}
+	{% if item == 'date' %}
+	<h6 class=date>{{time_tag}}</h6>
+	{% endif %}
+
+	{# Description #}
+	{% if item == 'description' and page_description is not empty %}
+	<h2 class=subheader>{{ page_description }}</h2>
+	{% endif %}
+
+	{# Preview #}
+	{% if item == 'preview' %}
+	{% set imgInfo = getimginfo(preview_image) %}
+	{% set preview_image_url = assetspath ~ preview_image|trim(".") %}
+
+	{# Crop #}
+	{% if context.crop.enabled %}
+		{% set crop_ratio = context.crop.crop[1] / context.crop.crop[0] * 100 %}
+	{% endif %}
+	{% set image_ratio = crop_ratio|default(imgInfo[1]/imgInfo[0] * 100) %}
+
+	{# Output #}
+	<div class='preview-image x-frame-medium-up images'>
+		<a class='img-link item-link item popup' data-options='w:{{ imgInfo[0] }};h:{{ imgInfo[1] }}' href='.' data-popup-href='{{ preview_image_url }}' data-image='{{ preview_image_url }}'{% if crop_ratio %} data-crop=true{% endif %}>
+			<figure>
+				<div class='image-container' style='padding-bottom:{{ image_ratio }}%;'>
+					<img data-src='{{ preview_image_url }}' alt=''>
+				</div>
+
+			{# Caption #}
+			{% if context.caption.enabled %}
+        <figcaption>
+
+        	{# title, label, amount, folder_amount, date, description, content #}
+					{% set caption_items = context.caption.items|split(',') %}
+
+        	{# loop items #}
+        	{% for item in caption_items %}
+
+        		{# Title #}
+        		{% if item == 'title' %}
+        		<span class='title'>{{ page_title|replace({'<a': '<span', '</a>': '</span>', ' href=': ' data-href=', ' target=': ' data-target='}) }}</span>
+        		{% endif %}
+
+        		{# Label #}
+        		{% if item == 'label' %}
+        		<span class='title'>{{ page.label }}</span>
+        		{% endif %}
+
+        		{# Amount #}
+        		{% if item == 'amount' %}
+						{% set amount = gallery.images|length %}
+        		<span class='amount'>{{ amount }} {{ pluralize(amount, 'image', 'images') }}</span>
+        		{% endif %}
+
+        		{# Folder Amount #}
+        		{% if item == 'folders_amount' %}
+        		{% set folders_amount = folder.children_count %}
+        		<span class='folder_amount'>{{ folders_amount }} {{ pluralize(folders_amount, 'album', 'albums') }}</span>
+        		{% endif %}
+
+        		{# Date #}
+        		{% if item == 'date' %}
+							{{time_tag}}
+        		{% endif %}
+
+        		{# Description #}
+        		{% if item == 'description' and page_description is not empty  %}
+        			<span class='description'>{{ page_description|replace({'<a': '<span', '</a>': '</span>', ' href=': ' data-href=', ' target=': ' data-target='}) }}</span>
+        		{% endif %}
+
+        		{# Content #}
+        		{% if item == 'content' and content is not empty %}
+        			<span class='content'>{{ content }}</span>
+        		{% endif %}
+
+        	{% endfor %}
+        </figcaption>
+      {% endif %}
+
+			</figure>
+		</a>
+	</div>
+	{% endif %}
+
+	{# Content #}
+	{% if item == 'content' and content is not empty %}
+		{#{% if content|replace({"</h":"<d>","</p":"<d>","<p":"<d>"})|split("<d>")|length > 3 %}{% set text_align = 'text-left' %}{% endif %}#}
+		{% if content|split("</p>")|length > 2 or '<ul>' in content or '<ol>' in content %}{% set text_align = 'text-left' %}{% endif %}
+		<div class='content {{ text_align }}'>{{ content }}</div>
+		{#<div class='content text-left'>{{ content }}</div>#}
+	{% endif %}
+
+{% endfor %}

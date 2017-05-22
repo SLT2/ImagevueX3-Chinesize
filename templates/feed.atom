@@ -1,0 +1,27 @@
+{% spaceless %}
+
+{% set absolutepath = page.base_url|addprotocol %}
+{% set rootpath = page.base_url|replace({(page.domain_name): ''}) %}
+{% set absolutepath_page = page.permalink|setpath(absolutepath) %}
+{% set rootpath_page = page.permalink|setpath(rootpath) %}
+{% set index = get("index") %}
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<title>{{ index.title|striptags|e('html') }}</title>
+{% if index.description is not empty %}<subtitle>{{ index.description|striptags|e('html') }}</subtitle>{% endif %}
+<link href="{{ absolutepath_page }}" rel="self" type="application/atom+xml"/>
+<link href="{{ absolutepath }}/" rel="alternate" type="text/html" />
+<updated>{{ page.site_updated }}</updated>
+<id>{{ absolutepath }}/</id>
+<generator uri="http://imagevuex.com" version="3">Imagevue X3</generator>
+<icon>{{ absolutepath }}/content/custom/favicon/favicon.png</icon>
+<logo>{{ absolutepath }}/content/custom/favicon/favicon.png</logo>
+<rights>{{ page.current_year ~ ' ' ~ page.domain_name }}</rights>
+<author>
+<name>{{ page.domain_name }}</name>
+<uri>{{ absolutepath }}/</uri>
+</author>
+{% include 'partials/feed/feed-loop.atom' %}
+</feed>
+{% endspaceless %}

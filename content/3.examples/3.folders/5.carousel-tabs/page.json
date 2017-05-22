@@ -1,0 +1,27 @@
+{
+    "title": "Carousel Tabs",
+    "description": "Use carousel tabs in combination with split-view to display child pages in a linear context.",
+    "image": "3.examples\/assets\/sunflower-bee.jpg",
+    "context": {
+        "classes": "separator"
+    },
+    "folders": {
+        "width": "wide",
+        "crop": {
+            "enabled": true
+        },
+        "layout": "carousel",
+        "carousel": {
+            "amount": 1,
+            "tabs": true,
+            "lazy": false,
+            "nav": false
+        },
+        "title_size": "normal",
+        "split": {
+            "enabled": true
+        },
+        "classes": "frame,text-center,hover",
+        "assets": "examples\/folders\/"
+    }
+}
